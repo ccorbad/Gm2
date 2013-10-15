@@ -1,0 +1,90 @@
+\section{Extra dimensions scenario}
+\subsection{Motivations}
+
+In the previous section, a four fermionic interaction due torsion has been found. One of the problems of this interaction is that, if one consider $4$-dimensional scenario, the coupling constant $\kappa^2$ is suppressed by $4$-dimensional Planck mass. There exist extra dimensions models where the $4$-dimensional Planck scale $M_{\text{Pl}}$ is an effective one from a fundamental Planck scale $M_*$ that relies in a extra dimensions manifold. Some of these models has been proposed by Arkani-Hamed, Dimopoulos and Dvali (ADD) Ref.~\cite{ArkaniHamed:1998rs}, that consider $n\geq2$ compact extra dimensions and by Randall and Sundrum (RS) Ref.~\cite{Randall:1999ee} that assumes $n=1$ large extra dimensions. 
+
+In extra dimensions manifolds, one has to decompose the higher dimensional spinor $\Psi$ into a four dimensional ones 
+ \begin{align}
+ \label{spinordecomp}
+  \Psi(x,\xi) &= N\,\sum_{i}\; \psi^{(i)}(x)\chi_{(i)}(\xi)
+ \end{align}
+where $\psi(x)$ and $\chi(\xi)$ are the four and $n$-dimensional spinors respectively ($x$ and $\xi$ denotes the four and $n$-dimensional coordinates respectively) and $N$ is a normalization factor. In order to get a effective theory in $4$-dimensions from a fundamental $D = 4 + n$ dimensions theory, one has to perform dimensional reduction of the $n$ extra dimensions.
+
+\subsection{The model}
+In the present work, RS metric Ref.~\cite{Randall:1999ee} will be consider
+\begin{align}
+ \label{RSmetric}
+ ds^2 = e^{-2ky}\eta_{\mu\nu}dx^\mu\,dx^\nu + dy^2.
+\end{align}
+
+In this scenario, the fifth dimension $y$ is compactified on an orbifold, $S^1/\mathbb{Z}_2$ of radius $R$ in the interval $0\leq y\leq \pi R$. The SM fields are localized on IR brane (this set up, is similar to Ref.~\cite{Gherghetta:2000qt,Gherghetta:2006ha} but with four fermion interaction coming from torsionful manifold). One can identify the $5$-dimensional vielbein directly from Eq.~\eqref{RSmetric} 
+\begin{align}
+\vifhn{a}{} &\equiv \left(\vifh^{a},\vifh^5\right) = \left(e^{-k|y|}\,dx^\mu,dy\right), 
+\end{align}
+and the invariant volume element can be calculated using 
+\begin{align}
+ |\hat{e}| = \det{\vih(x)^{\hat{a}}_{\hat{\mu}}} = e^{-4k|y|}.
+\end{align}
+Note that the determinant of the vielbein has only dependence on the fifth dimension and can be integrated out when dimensional reduction is performed. 
+
+The Kaluza-Klein (KK) decomposition for gauge and fermionic fields respectively are
+\begin{align}
+\label{KKgaugedecomp}
+\hat{A}_{\mu}^a(x,y) &= \frac{1}{\sqrt{\pi R}}\sum_{i}h^{(i)}(y)A_{\mu\,(i)}^a(x), \\
+\label{KKspindecomp}
+ \Psi(x,y)_r &= \frac{1}{\sqrt{\pi R}}\sum_{i}f_r^{(i)}(y)\psi_r^{(i)}(x),
+\end{align}
+where $R$ denotes the typical radius of the extra dimension, and the initial term is introduce as a normalization factor. The extra dimension information of $\Psi_r$ and $\hat{A}_\mu^a$ are enconded by $h^{(i)}(y)$ and $f_r^{(i)}(y)$ profiles. The terms $\psi_r^{(i)}(x)$ and $A_{\mu\,(i)}^a(x)$ denotes fermion of $r$ flavor and gauge fields on $4D$ spacetime, expanded on KK modes. 
+
+In the previous KK decomposition for gauge fields, $A_4=0$ has been used. This choice eliminates $A_4$ from the 3-brane but the gauge invariance of the effective action in 4-dimension still remains (see Ref.~\cite{Davoudiasl:1999tf}). 
+
+In the following analysis, only the zero mode of KK gauge and fermionic excitations $h^{(0)}(y)$ and $f_r^{(0)}(y)$ respectively, will be consider. This approach gives only the lower mass of KK tower and allows to search in the threshold of finding extra dimensions, because the upper modes with higher masses will be less accessible.
+
+\subsection{Effective theory in $4$D}
+
+Clifford algebra in $D = 5$ dimensions can be constructed using the $4$-dimensional one plus the chiral gamma matrix defined by $\gamma^5 = i\,\gamma^0\gamma^1\gamma^2\gamma^3$. Using tangent space coordinates, gamma matrices in $5D$ spacetime reads
+\begin{align}
+  \ghu{a} = \left(\gamma^a,\gamma^*\right).
+\end{align}
+With this definition the product of gamma matrices in Eq.~\eqref{4FI}, using a general $5$-dimensional spacetime, gives
+\begin{align}
+ \ghhhu{a}{b}{c}\ghhhd{a}{b}{c} &= \gamma^{abc}\gamma_{abc} + 3\gamma^{ab*}\gamma_{ab*} \\
+ &= 6\left(\gamma_a\gamma^*\right)\left(\gamma^a\gamma^*\right) + 3\left(\gamma^{ab}\gamma^*\right)\left(\gamma_{ab}\gamma^*\right)
+\end{align}
+(a general treatment of this calculation has been done in Apendix I). 
+
+If one consider only neutral gauge-fermion coupling in the $5D$ bulk as in Ref.~\cite{Davoudiasl:1999tf}, the interaction reads
+\begin{align}
+S_{\text{int}} &= -i\sum_{r}\,g_5\int d^5x\,|\hat{e}|\,\bar{\Psi}_r \gamma^{\hat{\mu}}T^a\Psi_r\hat{A}_\mu^a
+\end{align}
+where $T^a$ are the generators of Lie algebra associated to the gauge group. Defining the zero KK modes $f_r(y)\equiv f_r^{(0)}(y)$, $h^{(0)}(y)\equiv h(y)$, $\psi_r\equiv\psi_r^{(0)}(x)$ and $A_\mu\equiv A_{\mu\,(0)}(x)$ and considering only this contribution, the previous interaction reads
+\begin{align}
+S_{\text{int}} \approx -i \sum_{r}\,g_{\text{eff}}\,\int d^4x\,\bar{\psi}_r\gamma^\mu T^a\psi_r A_\mu^a
+\end{align}
+where the effective coupling
+\begin{align}
+ g_{\text{eff}} \equiv \int_0^{\pi R}dy\,e^{-4ky}g_5\,f_r^*(y)\,f_r(y)\,h(y)
+\end{align}
+contains all the information of the gauge coupling in the bulk.
+
+The four fermionic interaction in Eq.~\eqref{4FI} coming from torsion, can be written as
+\begin{align}
+\nonumber
+ S_{4\text{FI}} &= \frac{\kappa_{\text{eff}}^2}{32}\sum_{r,s}\int d^4x\left(6\,\bar{\psi}_{r}\gamma^\mu\gamma^5\psi_{r}\,\bar{\psi}_{s}\gamma_\mu\gamma^5\psi_{s}\right.\\
+ \label{4FI5D}
+ &+\left. 3\,\bar{\psi}_r\gamma^{\mu\nu}\gamma^5\psi_r\,\bar{\psi}_s\gamma_{\mu\nu}\gamma^5\psi_s\right)
+\end{align}
+where $\kappa_{\text{eff}}^2$ has been defined in terms of the zero modes of KK excitations, from Ref.~\cite{Gherghetta:2000qt}
+\begin{align}
+ k_{\text{eff}}^2 \simeq \frac{k}{M_*^3}\,e^{(4-2c_m-2c_n)\pi kR}.
+\end{align}
+and contains all the extra dimensions information after performing dimensional reduction. A special choice of the profiles can be done from the values obtained on Ref.~\cite{Gherghetta:2006ha}, in order to explore only hierarchy of the gravitation scale $M_*$ on extra dimensions. The choice $c_i\simeq1$ will be used, in order to deal only with the hierarchy of the gravitational scale. With this, one obtain
+\begin{align}
+ M_{\text{Pl}} \simeq \frac{M_*^3}{k}
+\end{align}
+
+For the same reason, the effective coupling of neutral gauge bosons coupled to fermionic current, will be considered equal as the SM in $4D$, (i.e.: $g_{\text{eff}} = e\,Q_f$ for photon exchange and $g_{\text{eff}} = e/(2c_Ws_W)\left(T^3_f - 2\,s_W^2\,Q_f\right)$ for $Z^0$ exchange, where $Q_f$ is electric charge in proton unities, $T_f^3$ is the third component of weak isospin and $s_W(c_W) = \sin(\cos)\theta_W$). 
+
+An extra axial-tensor term arises by considering only one extra dimension in Eq.~\eqref{4FI5D}. This term will play an important role in the following section, because contribute to magnetic form factor and some experiments of anomalous magnetic moment, will be very sensitive to this contribution. (cites of electron magnetic moment, neutrino magnetic moment and muon magnetic moment).
+
+

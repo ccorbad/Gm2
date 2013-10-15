@@ -1,0 +1,80 @@
+\section*{Apendix I}
+
+\subsection*{Even dimensions $D=2m$ Clifford algebra}
+The full basis for Clifford algebra on general $D$ even dimensions, with $D=2m$ can be expanded using
+\begin{equation}
+\{ \Gamma^A = \1,\gamma^{\hat{a}_1},\gamma^{\hat{a}_1\hat{a}_2},\ldots,\gamma^{\hat{a}_1\ldots \hat{a}_D} \}
+\end{equation}
+where the usefull definition $\gamma^{\hat{a}_1\ldots \hat{a}_r} = \gamma^{[\hat{a}_1}\ldots\gamma^{\hat{a}_r]}$ has been used. Now, one can define the highest rank Clifford algebra element, 
+\begin{equation}
+\label{gs}
+\gs = \frac{1}{D\,!}i^{-(m+1)}\epsilon^{\hat{a}_1\ldots \hat{a}_D}\gamma_{\hat{a}_1\ldots \hat{a}_D}
+\end{equation}
+where the convention $\epsilon^{012\ldots(D-1)} = 1$ has been used. $\gs$ is well known in physics literature as $\gamma^{D+1}$ (for example, in $D=4$ is the familiar $\gamma^5$ matrix), with $\Tr{\left[\gs\right]}=0$ and $\left(\gs\right)^2 = +\1$. Using the definition  of $\gamma^{\hat{a}_1\ldots\hat{a}_r}$ and $\gs$ one can show the following identity
+\begin{equation}
+\gamma^{\hat{a}_1\ldots \hat{a}_r} = (-i)^{m+1}\,\frac{1}{(D-r)!}\epsilon^{\hat{a}_r \hat{a}_{r-1}\ldots \hat{a}_1 \hat{b}_1\ldots \hat{b}_{D-r}}\gamma_{\hat{b}_1\ldots \hat{b}_D}\gs 
+\end{equation}
+
+For example, let's consider $D=2m$ dimensional space, and $r=3$
+\begin{align}
+\gamma^{\hat{a}\hat{b}\hat{c}} &= (-i)^{m+1}\,\frac{1}{(D-3)!}\epsilon^{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\gamma_{\hat{a}_1\ldots \hat{a}_{D-3}}\gs \\
+\gamma_{\hat{a}\hat{b}\hat{c}} &= (-i)^{m+1}\,\frac{1}{(D-3)!}\epsilon_{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\gamma^{\hat{a}_1\ldots \hat{a}_{D-3}}\gs 
+\end{align}
+now, contracting this two totally antisymmetric tensors
+\begin{align}
+\nonumber
+\gamma^{\hat{a}\hat{b}\hat{c}}\gamma_{\hat{a}\hat{b}\hat{c}} &= (-i)^{2(m+1)}\,\frac{1}{\left((D-3)!\right)^2}\\ &\times\,\epsilon^{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\epsilon_{\hat{a}\hat{b}\hat{c}\,\hat{b}_1\ldots \hat{b}_{D-3}}\gamma_{\hat{a}_1\ldots \hat{a}_{D-3}}\gs\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs
+\end{align}
+one can use the identity 
+\begin{align}
+\epsilon^{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\epsilon_{\hat{a}\hat{b}\hat{c}\,\hat{b}_1\ldots \hat{b}_{D-3}} = -3!\delta^{\hat{a}_1}_{[\hat{b}_1}\ldots \delta^{\hat{a}_{D-3}}_{\hat{b}_{D-3}]}.
+\end{align}
+Contracting this last generalized antisymmetric Kronecker delta, and reordering antisymmetric gamma product, one obtain an extra $(D-3)!$, that canceled one of this factor in the denominator. With this, one gets a general relation for even dimension
+\begin{equation}
+\gamma^{\hat{a}\hat{b}\hat{c}}\gamma_{\hat{a}\hat{b}\hat{c}} = \frac{i^{(2m+2)}}{(D-3)!}\,(-3!)\gamma_{\hat{b}_1\ldots \hat{b}_{D-3}}\gs\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs.
+\end{equation}
+
+In the particular case of $D=4$ ($m=2$), one can write
+\begin{equation}
+ \gamma^{\hat{a}\hat{b}\hat{c}}\gamma_{\hat{a}\hat{b}\hat{c}} = + 6\gamma_a\gs\gamma^a\gs
+\end{equation}
+where $a$ index without hat, denotes the $D=2m$ tangent space coordinates and the definition for $\gs$ is in Eq.~\eqref{gs}
+
+\subsection*{Odd dimensions $D=2m+1$ Clifford algebra}
+The main idea is construct the $D=2m+1$ dimensional Clifford algebra, using the $D=2m$ dimensional one, and the highest rank Clifford algebra element $\gs$. Expanding the basis for $D=2m+1$,
+\begin{equation}
+ \ghu{a} = \left(\gamma^a,\gs\right)
+\end{equation}
+where the notation without hat for previous even dimensions has been used. In this case, one found
+\begin{equation}
+ \gamma^{\hat{a}_1\ldots \hat{a}_r} = \frac{i^{m+1}}{(D-r)!}\epsilon^{\hat{a}_1\ldots\hat{a}_r\hat{a}_{r+1}\ldots\hat{a}_D}\gamma_{\hat{a}_D\ldots\hat{a}_{r+1}}.
+\end{equation}
+Let consider the particular case with $r=3$, with this
+\begin{align}
+\ghhhu{a}{b}{c} &= \frac{i^{m+1}}{(D-3)!}\epsilon^{\hat{a}\hat{b}\hat{c}\hat{c}_4\ldots\hat{c}_D}\gamma_{\hat{c}_D\ldots\hat{c}_4} \\
+\ghhhd{a}{b}{c} &= \frac{i^{m+1}}{(D-3)!}\epsilon_{\hat{a}\hat{b}\hat{c}\hat{d}_4\ldots\hat{d}_D}\gamma^{\hat{d}_D\ldots\hat{d}_4} \\
+\end{align}
+with this, and contracting both antisymmetric product of gamma matrices, one found
+\begin{align}
+\ghhhu{a}{b}{c}\ghhhd{a}{b}{c} &= \frac{i^{(2m+2)}}{\left((D-3)!\right)^2}\epsilon^{\hat{a}\hat{b}\hat{c}\hat{c}_4\ldots\hat{c}_D}\epsilon_{\hat{a}\hat{b}\hat{c}\hat{d}_4\ldots\hat{d}_D}\gamma_{\hat{c}_D\ldots\hat{c}_4}\gamma^{\hat{d}_D\ldots\hat{d}_4}
+\end{align}
+using the identity 
+\begin{align}
+\epsilon^{\hat{a}\hat{b}\hat{c}\hat{c}_4\ldots\hat{c}_D}\epsilon_{\hat{a}\hat{b}\hat{c}\hat{d}_4\ldots\hat{d}_D} = -3!\delta^{\hat{c}_4}_{[\hat{d}_4}\ldots\delta^{\hat{c}_D}_{\hat{d}_D]}
+\end{align}
+and contracting, and reordering the antisymmetric product of gamma matrices, one gets (like in even case), a factor of $(D-3)!$ that canceled one factor on the denominator, with this, one gets the general case for odd dimension
+\begin{equation}
+\ghhhu{a}{b}{c}\ghhhd{a}{b}{c} = \frac{i^{(2m+2)}}{(D-3)!}(-3!)\gamma_{\hat{c}_4\ldots\hat{c}_D}. \gamma^{\hat{c}_4\ldots\hat{c}_D}
+\end{equation}
+
+For example, let's take $D=5$
+\begin{align}
+\ghhhu{a}{b}{c}\ghhhd{a}{b}{c} &= +\frac{3!}{2!}\gamma_{\hat{c}\hat{d}}\gamma^{\hat{c}\hat{d}} \\
+&= 3\left(\gamma_{ab}\gamma^{ab} + \gamma_{a*}\gamma^{a*} + \gamma_{*a}\gamma^{*a}\right)\\
+&= 3\left(\gamma_{ab}\gamma^{ab} + 2\gamma_{a*}\gamma^{a*}\right)
+\end{align}
+one can multiply by one $\left(\gs\right)^2 = \1$, the tensorial part and reordering one gets
+\begin{equation}
+ \ghhhu{a}{b}{c}\ghhhd{a}{b}{c} = 6\gamma_a\gs\gamma^a\gs + 3\gamma_{ab}\gs\gamma^{ab}\gs
+\end{equation}
+
