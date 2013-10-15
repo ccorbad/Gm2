@@ -1,5 +1,5 @@
 \section{Cartan-Einstein theory of gravity with fermions}
-In this section a brief description of Cartan-Einstein formulation (CEF) of gravity will be done. CEF is constructed in more general way that Einstein-Hilbert one. Spin connection and vielbeins are independent at the beginning and the presence of torsion is also assumed. Including torsion into the picture implies that one will assume non-vanishing antisymmetric part for the affine connection 
+In this section a brief description of Cartan-Einstein Formulation (CEF) of gravity will be done. CEF is constructed in more general way that Einstein-Hilbert one. Spin connection and vielbeins are independent at the beginning and the presence of torsion is also assumed. Including torsion into the picture implies that one will assume nonvanishing antisymmetric part for the affine connection 
 \begin{align}
  \hat{T}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} \equiv \hat{\Gamma}_{[\hat{a}}{}^{\hat{b}}{}_{\hat{c}]} = \hat{\Gamma}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} - \hat{\Gamma}_{\hat{c}}{}^{\hat{b}}{}_{\hat{a}}
 \end{align}
@@ -8,25 +8,25 @@ where latin indices with a hat denotes local inertial frame coordinates, running
 \label{metricrelation}
  \hat{g}_{\hat{\mu}\hat{\nu}}(x) = \hat{\eta}_{\hat{a}\hat{b}}\,\vih^{\hat{a}}_{\hat{\mu}}(x)\,\vih^{\hat{b}}_{\hat{\nu}}(x).
  \end{equation}
-where $\etah{a}{b} = \diag{\left(-,+,+,+,\ldots,+\right)}$ is the Minkowski metric in D dimensional space-time and $\vih(x)^{\hat{a}}_{\hat{\mu}}$ are the vielbein field. If one wants to add fermionic matter and preserve the local Lorentz invariance of
+where $\etah{a}{b} = \diag{\left(-,+,+,+,\ldots,+\right)}$ is the Minkowski metric in $D$-dimensional spacetime and $\vih(x)^{\hat{a}}_{\hat{\mu}}$ are the vielbein fields. If one wants to add fermionic matter and preserve the local Lorentz invariance of
 \begin{equation}
  S_\Psi = \int d^Dx\,\Lag\left(\Psi,\partial_{\hat{\mu}}\Psi\right),
 \end{equation}
-one has to define the covariant derivative for fermions, and the covariant volume element. This can be done, replacing
+one defines the covariant derivative for fermions and the covariant volume element. This is achieved by replacing
 \begin{equation}
 S_\Psi = \int d^Dx\,|\hat{e}|\,\Lag\left(\Psi,D_{\hat{a}}\Psi\right),
 \end{equation}
-where $d^Dx\,|\hat{e}| = d^Dx\,\sqrt{-\hat{g}}$ is the covariant volume element, $|\hat{e}|=\det{\vih(x)^{\hat{a}}_{\hat{\mu}}}$ is the determinant of the $D$-dimensional vielbein and
+where $d^Dx\,|\hat{e}| = d^Dx\,\sqrt{-\hat{g}}$ is the covariant volume element, $|\hat{e}|=\det{\left(\vih(x)^{\hat{a}}_{\hat{\mu}}\right)}$ is the determinant of the $D$-dimensional vielbein and
 \begin{equation}
 \label{covder}
  D_{\hat{a}}\Psi = \hat{E}_{\hat{a}}^{\hat{\mu}}D_{\hat{\mu}}\Psi = \hat{E}_{\hat{a}}^{\hat{\mu}}\left(\partial_{\hat{\mu}}\Psi + \frac{1}{4}(\omega_{\hat{\mu}})^{\hat{b}\hat{c}}\gamma_{\hat{b}\hat{c}}\Psi\right)
 \end{equation}
-denotes the covariant derivative for fermions. In Eq.~\eqref{covder} $(\omega_{\hat{\mu}})^{\hat{b}\hat{c}}$ denotes the spin connection twisted by presence of torsion, $\gamma_{\hat{a}\hat{b}} = \frac{1}{2}\comm{\gamma_{\hat{a}}}{\gamma_{\hat{b}}}$ and $\hat{E}^\mu_a = \left(\hat{e}^a_\mu\right)^{-1}$ is the inverse of the $D$-dimensional vielbein. Using this version of fermionic matter action, the local Lorentz invariance is guaranteed. The torsionful spin connection described before, can be decomposed in two parts, using differential forms
+denotes the covariant derivative for fermions. In Eq.~\eqref{covder} $(\omega_{\hat{\mu}})^{\hat{b}\hat{c}}$ denotes the spin connection twisted by presence of torsion, $\gamma_{\hat{a}\hat{b}} = \frac{1}{2}\comm{\gamma_{\hat{a}}}{\gamma_{\hat{b}}}$ and $\hat{E}^\mu_a = \left(\hat{e}^a_\mu\right)^{-1}$ is the inverse of the $D$-dimensional vielbein. Using this version of fermionic matter action, the local Lorentz invariance is guaranteed. The torsionful spin connection can be decomposed into
 \begin{equation}
 \label{spinconndecomp}
 \wfh^{\hat{a}\hat{b}} = \wfhfree^{\hat{a}\hat{b}} + \hat{\Kf}^{\hat{a}\hat{b}},
 \end{equation}
-where bold symbols are used to denotes differential forms. $\wfhfree^{\hat{a}\hat{b}} = (\hat{\mathring{\omega}}_{\hat{\mu}})^{\hat{a}\hat{b}}\,dx^{\hat{\mu}}$ denotes the one form torsion free spin connection, that transforms as a connection. Hereon circled quantities will denote torsion free ones. $\hat{\Kf}^{\hat{a}\hat{b}} = \hat{\K}^{\hat{a}\hat{b}\hat{c}}\,\hat{\eta}_{\hat{b}\hat{d}}\,\vih^{\hat{d}}_{\hat{\mu}}\,dx^{\hat{\mu}}$ is {\it{contorsion}} one form and contains torsion information. Contorsion and torsion tensor are related via
+where $\wfhfree^{\hat{a}\hat{b}} = (\hat{\mathring{\omega}}_{\hat{\mu}})^{\hat{a}\hat{b}}\,dx^{\hat{\mu}}$ denotes the one-form torsion-free spin connection and $\hat{\Kf}^{\hat{a}\hat{b}} = \hat{\K}^{\hat{a}\hat{b}\hat{c}}\,\hat{\eta}_{\hat{b}\hat{d}}\,\vih^{\hat{d}}_{\hat{\mu}}\,dx^{\hat{\mu}}$ is the {\it{contorsion}} one-form and contains torsion information. Hereon circled quantities are torsion-free and bold symbols denote differential forms.  Contorsion and torsion tensors are related via
 \begin{equation}
 \label{generalcontorsion}
 \hat{\K}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} = \frac{1}{2}\left(\hat{\T}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} + \hat{\T}_{\hat{a}\hat{c}}{}^{\hat{b}} + \hat{\T}^{\hat{b}}{}_{\hat{a}\hat{c}}\right).
@@ -39,7 +39,12 @@ The two most important equations in this formalism, that relates the vielbeins a
  \label{cartancurvature}
  \df\wfh^{\hat{a}\hat{b}} + \wfh^{\hat{a}}{}_{\hat{c}}\wedge\wfh^{\hat{c}\hat{b}} &= \Rfhn{a}{}{b}{},
 \end{align}
-where $\vifhn{a}{} \equiv \vih^{\hat{a}}_{\hat{\mu}}(x)\,dx^{\hat{\mu}}$ is the vielbein one form, and its covariant derivative is the torsion two form, defined $\Tfhn{a}{} \equiv \frac{1}{2!}\hat{\T}_{\hat{\mu}}{}^{\hat{a}}{}_{\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}}$. The second equation relates the torsionful spin connection one form derivative with the curvature two form, defined $\Rfhn{a}{}{b}{}\equiv \frac{1}{2!}\Rh^{\hat{a}\hat{b}}{}_{\hat{\mu}\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}}$. 
+where $\vifhn{a}{} \equiv \vih^{\hat{a}}_{\hat{\mu}}(x)\,dx^{\hat{\mu}}$ is the vielbein one-form, $\Tfhn{a}{}$ and $\Rfhn{a}{}{b}{}$ are the torsion and curvature two-forms respectively, defined by
+\begin{align}
+ \Tfhn{a}{} &= \frac{1}{2!}\hat{\T}_{\hat{\mu}}{}^{\hat{a}}{}_{\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}}\\
+ \Rfhn{a}{}{b}{} &= \frac{1}{2!}\Rh^{\hat{a}\hat{b}}{}_{\hat{\mu}\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}}.
+\end{align}
+
 
 \subsection{Action and equations of motion}
 The following action will be considered
@@ -47,21 +52,21 @@ The following action will be considered
 \nonumber
  S &= \frac{1}{2\kappa_*^2}\int\frac{\epsilon_{\hat{a}_1\ldots\hat{a}_D}}{(D-2)!}\,\Rfh^{\hat{a}_1\hat{a}_2}\wedge\vifh^{\hat{a}_3}\wedge\ldots\wedge\vifh^{\hat{a}_D} \\
    \nonumber
-   &+ \sum_{r}\int\left(\frac{1}{2}\left((-1)^D\bar{\Psi}_r\hodge\gf\wedge\Df\Psi_r + \Df\bar{\Psi}_r\wedge\hodge\gf\Psi_r\right)\right. \\
+   &\quad+ \sum_{r}\int\bigg(\frac{1}{2}\left((-1)^D\bar{\Psi}_r\hodge\gf\wedge\Df\Psi_r + \Df\bar{\Psi}_r\wedge\hodge\gf\Psi_r\right) \\
  \label{formaction}
- &+ \left.m\bar{\Psi}_r\Psi_r\,\frac{\epsilon_{\hat{a}_1\ldots\hat{a}_D}}{D!}\vifh^{\hat{a}_1}\wedge\ldots\wedge\vifh^{\hat{a}_D}\right)
+ &\qquad- m\bar{\Psi}_r\Psi_r\,\frac{\epsilon_{\hat{a}_1\ldots\hat{a}_D}}{D!}\vifh^{\hat{a}_1}\wedge\ldots\wedge\vifh^{\hat{a}_D}\bigg)
 \end{align}
-where $\kappa_*^2 = 8\pi G_N^* = M_*^{-(2+n)}$ ($G_N^*$ and $M_*$ are the Newtonian gravity constant and the reduced Planck mass on $D = 4 + n$ dimensions respectively). In the fermionic sector $\Psi_r$ denotes the spinor field of flavor $r$ on the $D$-dimensional spacetime with $2^{[D/2]}$ components. The definitions $\gf = \gamma_{\hat{a}_1}\vifh^{\hat{a}_1}$ and $\Df\Psi = D_{\hat{b}_1}\Psi\,\vifh^{\hat{b}_1}$ has been used and $\hodge\gf$ denotes {\it{Hodge Dual}} of $\gf$. The adventage of using differential forms, is that this formalism is coordinate independent and the equations of motion are easy to find. The action in Eq.~\eqref{formaction} is equivalent to
+where $\kappa_*^2 = 8\pi G_N^* = M_*^{-(2+n)}$ ($G_N^*$ and $M_*$ are the Newtonian gravity constant and the reduced Planck mass on $D = 4 + n$ dimensions respectively). In the fermionic sector $\Psi_r$ denotes the spinor field of flavor $r$ on the $D$-dimensional spacetime with $2^{[D/2]}$ components. The definitions $\gf = \gamma_{\hat{a}_1}\vifh^{\hat{a}_1}$ and $\Df\Psi = D_{\hat{b}_1}\Psi\,\vifh^{\hat{b}_1}$ has been used and $\hodge\gf$ denotes {\it{Hodge Dual}} of $\gf$. The adventage of using differential forms, is that this formalism is coordinate independent and the equations of motion are easily found. The action in Eq.~\eqref{formaction} is equivalent to
 \begin{align}
 \nonumber
  S &= \frac{1}{2\kappa_*^2}\int d^Dx\,|\hat{e}|\,\hat{\R} \\ 
  \nonumber
- &-\sum_{r}\int d^Dx\,|\hat{e}|\,\left(\frac{1}{2}\left(\bar{\Psi}_r\slashed{D}\Psi_r - \slashed{D}\bar{\Psi}_r\,\Psi_r\right)\right.\\
+ &\quad -\sum_{r}\int d^Dx\,|\hat{e}|\,\bigg(\frac{1}{2}\left(\bar{\Psi}_r\gamma^{\hat{a}}D_{\hat{a}}\Psi_r - D_{\hat{a}}\bar{\Psi}\gamma^{\hat{a}}\Psi\right)\\
   \label{coordinateaction}
- &- \left.m\bar{\Psi}_r\Psi_r\right).
+ &\qquad + m\bar{\Psi}_r\Psi_r\bigg).
 \end{align}
 
-The equations of motions of this theory can be found using the principle of least action. Varying with respect to the vielbein leads to the Einstein equations
+The equations of motion are found using the principle of least action. Varying with respect to the vielbein leads to the Einstein equations
 \begin{equation}
  \label{einsteineom}
  \Rh_{\hat{a}\hat{b}} - \frac{1}{2}\etah{a}{b}\Rh = \kappa_*^2\,\hat{T}_{\hat{a}\hat{b}}
@@ -70,7 +75,7 @@ where $\hat{T}_{\hat{a}\hat{b}}$ denotes the energy-momentum tensor of fermions.
 \begin{align}
  \hat{T}_{\hat{a}\hat{b}} &= \sum_{r}\frac{1}{2}\left(\bar{\Psi}_r\gamma_{\hat{a}}D_{\hat{b}}\Psi_r - D_{\hat{b}}\bar{\Psi}_r\,\gamma_{\hat{a}}\Psi_r\right) - \etah{a}{b}\Lag_{\Psi}
 \end{align}
-with $\Lag_\Psi$ the Dirac Lagrangian from Eq.~\eqref{coordinateaction}. The second equation of motion can be obtained varying with respect to torsionful spin connection, and the torsion tensor can be found
+with $\Lag_\Psi$ the Dirac Lagrangian from Eq.~\eqref{coordinateaction}. The second equation of motion can be obtained varying with respect to the torsionful spin connection, giving
 \begin{align}
 \label{torsion}
  \Th_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} = -\, \frac{\kappa_*^2}{2}\sum_{r}\bar{\Psi}_r\gamma_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}}\Psi_r.
@@ -84,32 +89,36 @@ One could notice that gravity and fermions in CEF leads to a completely antisymm
 
 \subsection{Torsion contribution to initial action}
 
-Eq.~\eqref{contorsionfound} has no dynamics, therefore one can sustitute into the initial action as a constraint. There exists models where torsion appears as a dynamical field instead of the minimal consideration of this work (for further reading Ref.~\cite{Carroll:1994dq,Belyaev:1998ax}). Replacing Eq.~\eqref{contorsionfound} in gravity sector leads to
+%Eq.~\eqref{contorsionfound} has no dynamics, therefore one can sustitute into the initial action as a constraint. There exists models where torsion appears as a dynamical field instead of the minimal consideration of this work (for further reading Ref.~\cite{Carroll:1994dq,Belyaev:1998ax}). Replacing Eq.~\eqref{contorsionfound} in gravity sector leads to
+Equation of motion of the spin connection is a constraint, therefore it can be substituted into the initial action. There exists models where torsion appears as a dynamical field instead of the minimal consideration of this work (for further reading Refs.~\cite{Carroll:1994dq,Belyaev:1998ax}). Replacing Eq.~\eqref{contorsionfound} in gravity sector leads to  
 \begin{align}
  \label{gravdecomp}
- \Rfhn{a}{1}{a}{2} &= \Rfhnfree{a}{1}{a}{2} + \free{\Df}\Kfhn{a}{1}{a}{2} + \Kfhnud{a}{1}{b}{}\wedge\Kfhn{b}{}{a}{2},
+ \Rfhn{a}{1}{a}{2} &= \Rfhnfree{a}{1}{a}{2} + \free{\Df}\Kfhn{a}{1}{a}{2} + \Kfhnud{a}{1}{b}{}\wedge\Kfhn{b}{}{a}{2}.
 \end{align}
-
 For Dirac fermions, this replacement adds a contribution in the covariant derivative 
 \begin{align}
- \Df\Psi_r = \free{\Df}\Psi_r + \frac{1}{4}\Kfhn{a}{}{b}{}\,\gamma_{\hat{a}\hat{b}}\Psi_r, 
+ \Df\Psi_r = \free{\Df}\Psi_r + \frac{1}{4}\Kfhn{a}{}{b}{}\,\gamma_{\hat{a}\hat{b}}\Psi_r.
 \end{align}
 
-Inserting these conditions into the initial action, one find in coordinates
+Inserting these conditions into the initial action, one finds
 \begin{align}
 \label{4FI}
  S =\; & \free{S}_\text{grav} + \free{S}_\Psi + \frac{\kappa_* ^2}{32}\sum_{r,s}\int d^Dx|\hat{e}|\,\bar{\Psi}_r\gamma^{\hat{a}\hat{b}\hat{c}}\Psi_r\,\bar{\Psi}_s\gamma_{\hat{a}\hat{b}\hat{c}}\Psi_s
 \end{align}
 
-A more general formulation of gravity, where non-vanishing torsion tensor is considered, leads to a four fermionic interaction as one can notice in Eq.~\eqref{4FI}. Several authors also have studying possible gravitational effects of torsion and its possible phenomenology Ref.~\cite{Belyaev:1998ax,Fabbri:2010hz,Capozziello:2012xt,Mavromatos:2012cc,CastilloFelisola:2012fy,Fabbri:2013gza}.
 
-Two features that should be highlighted are the universality of this four fermion interaction and that this interaction arises from the kinetic term in the Dirac action. This fact constraints the quantum numbers per current and fermions in this interaction appears in pairs. 
+From Eq.~\eqref{4FI}, one can notice that a more general formulation of gravity, with nonvanishing torsion tensor is considered, leads to a four fermion interaction. Several authors also have studying possible gravitational effects of torsion and its possible phenomenology Ref.~\cite{Belyaev:1998ax,Fabbri:2010hz,Capozziello:2012xt,Mavromatos:2012cc,CastilloFelisola:2012fy,Fabbri:2013gza}.
+%A more general formulation of gravity, where nonvanishing torsion tensor is considered, leads to a four fermionic interaction as one can notice in Eq.~\eqref{4FI}. Several authors also have studying possible gravitational effects of torsion and its possible phenomenology Ref.~\cite{Belyaev:1998ax,Fabbri:2010hz,Capozziello:2012xt,Mavromatos:2012cc,CastilloFelisola:2012fy,Fabbri:2013gza}.
 
-It is important to remark that, instead of the liberty of choice for theory with torsion, the minimal extension of CEF has been used. In this framework gauge fields does not couple to torsion at classical level. If one consider gauge fields in curved spacetime, the field strength tensor appears as torsion free term in the action, and there is no reason to change partial derivatives by torsionful covariant derivatives in the field strength tensor for gauge bosons, because the usual definition
+Two features that should be highlighted. First, the universality of this four fermion interaction due to flavor blindness of gravity. Second, torsion arises from the kinetic term in the Dirac action. This fact constraints the quantum numbers per current and fermions in this interaction appears in pairs. 
+
+%ambiguity of theory with torsion..
+
+It is important to remark that, instead of the liberty of choice for theory with torsion, the minimal extension of CEF has been used. In this framework gauge fields does not couple to torsion at classical level. If one consider gauge fields nn curved spacetimes, the field strength tensor appears as torsion-free term in the action, and there is no reason to change partial derivatives by torsionful covariant derivatives in the field strength tensor for gauge bosons, because the usual definition
 \begin{align}
 \hat{F}_{\hat{\mu}\hat{\nu}}^a &= \partial_{\hat{\mu}}\hat{A}_{\hat{\mu}}^a - \partial_{\hat{\nu}}\hat{A}_{\hat{\nu}}^a +f^{a}{}_{bc}\hat{A}^b_{\hat{\mu}}\hat{A}^c_{\hat{\nu}}
 \end{align}
-is also valid for curved spacetime. A more natural way to understand this, relies on CEF, because one form gauge field transform as a connection (in CEF formalism, gauge fields are also one forms). By this reason active Lorentz transformation keeps invariant the one form gauge fields, and no covariant derivative is needed (for a further reading, see Ref.~\cite{Benn:1980ea}). This condition keeps safe the gauge invariance of the theory Ref.~\cite[p.407]{Hehl:1976kj}. One could do explicit calculation with torsionful covariant derivative acting on one form gauge field, and realize that the gauge violating terms vanishes.
+is also valid for curved spacetimes. A more natural way to understand this, relies on CEF, because one-form gauge field transform as a connection (in CEF formalism, gauge fields are also one-forms). By this reason active Lorentz transformation keeps invariant the one-form gauge fields, and no covariant derivative is needed (for a further reading, see Ref.~\cite{Benn:1980ea}). This condition keeps safe the gauge invariance of the theory Ref.~\cite[p.407]{Hehl:1976kj}. One could do explicit calculation with torsionful covariant derivative acting on one-form gauge field, and realize that the gauge violating terms vanishes.
 
 
 
