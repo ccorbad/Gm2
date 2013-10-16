@@ -3,9 +3,11 @@
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{decorations.pathmorphing}
-\tikzstyle directed=[postaction={decorate,decoration={markings,mark=at position .65 with {\arrow[arrowstyle]{stealth}}}}]
-\tikzset{[cross/.style={path picture={ 
-  \draw[black]
-(path picture bounding box.south east) -- (path picture bounding box.north west) (path picture bounding box.south west) -- (path picture bounding box.north east);
-}}]}
+\tikzstyle directed=[postaction={decorate,decoration={markings,mark=at position .5 with {\arrow{stealth}}}}]
+\tikzset{%
+  cross/.style={path picture={ 
+      \draw[black]
+      (path picture bounding box.south east) -- (path picture bounding box.north west) 
+      (path picture bounding box.south west) -- (path picture bounding box.north east);
+}}}
 \tikzset{boson/.style={decorate,decoration={snake}}}
