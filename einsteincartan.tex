@@ -16,7 +16,7 @@ one defines the covariant derivative for fermions and the covariant volume eleme
 \begin{equation}
 S_\Psi = \int d^Dx\,|\hat{e}|\,\Lag\left(\Psi,D_{\hat{a}}\Psi\right),
 \end{equation}
-where $d^Dx\,|\hat{e}| = d^Dx\,\sqrt{-\hat{g}}$ is the covariant volume element, $|\hat{e}|=\det{\left(\vih(x)^{\hat{a}}_{\hat{\mu}}\right)}$ is the determinant of the $D$-dimensional vielbein and
+where $d^Dx\,|\hat{e}| = d^Dx\,\sqrt{|\hat{g}|}$ is the covariant volume element, $|\hat{e}|=\det{\left(\vih^{\hat{a}}_{\hat{\mu}}\right)}$ is the determinant of the $D$-dimensional vielbein and
 \begin{equation}
 \label{covder}
  D_{\hat{a}}\Psi = \hat{E}_{\hat{a}}^{\hat{\mu}}D_{\hat{\mu}}\Psi = \hat{E}_{\hat{a}}^{\hat{\mu}}\left(\partial_{\hat{\mu}}\Psi + \frac{1}{4}(\omega_{\hat{\mu}})^{\hat{b}\hat{c}}\gamma_{\hat{b}\hat{c}}\Psi\right)
@@ -26,10 +26,10 @@ denotes the covariant derivative for fermions. In Eq.~\eqref{covder} $(\omega_{\
 \label{spinconndecomp}
 \wfh^{\hat{a}\hat{b}} = \wfhfree^{\hat{a}\hat{b}} + \hat{\Kf}^{\hat{a}\hat{b}},
 \end{equation}
-where $\wfhfree^{\hat{a}\hat{b}} = (\hat{\mathring{\omega}}_{\hat{\mu}})^{\hat{a}\hat{b}}\,dx^{\hat{\mu}}$ denotes the one-form torsion-free spin connection and $\hat{\Kf}^{\hat{a}\hat{b}} = \hat{\K}^{\hat{a}\hat{b}\hat{c}}\,\hat{\eta}_{\hat{b}\hat{d}}\,\vih^{\hat{d}}_{\hat{\mu}}\,dx^{\hat{\mu}}$ is the {\it{contorsion}} one-form and contains torsion information. Hereon circled quantities are torsion-free and bold symbols denote differential forms.  Contorsion and torsion tensors are related via
+where $\wfhfree^{\hat{a}\hat{b}} = (\hat{\mathring{\omega}}_{\hat{\mu}})^{\hat{a}\hat{b}}\,dx^{\hat{\mu}}$ denotes the one-form torsion-free spin connection and $\hat{\Kf}^{\hat{a}\hat{b}} = \hat{\K}_{\mu}{}^{\hat{a}\hat{b}}\,dx^{\hat{\mu}}$ is the {\it{contorsion}} one-form and contains torsion information. Hereon circled quantities are torsion-free and bold symbols denote differential forms.  Contorsion and torsion tensors are related via
 \begin{equation}
 \label{generalcontorsion}
-\hat{\K}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} = \frac{1}{2}\left(\hat{\T}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} + \hat{\T}_{\hat{a}\hat{c}}{}^{\hat{b}} + \hat{\T}^{\hat{b}}{}_{\hat{a}\hat{c}}\right).
+\hat{\K}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} = \frac{1}{2}\left(\hat{\T}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} - \hat{\T}_{\hat{a}\hat{c}}{}^{\hat{b}} + \hat{\T}^{\hat{b}}{}_{\hat{a}\hat{c}}\right).
 \end{equation}
 
 The two most important equations in this formalism, that relates the vielbeins and the spin connection with torsion and curvature respectively are the so called {\it{Cartan structure equations}} 
@@ -39,9 +39,9 @@ The two most important equations in this formalism, that relates the vielbeins a
  \label{cartancurvature}
  \df\wfh^{\hat{a}\hat{b}} + \wfh^{\hat{a}}{}_{\hat{c}}\wedge\wfh^{\hat{c}\hat{b}} &= \Rfhn{a}{}{b}{},
 \end{align}
-where $\vifhn{a}{} \equiv \vih^{\hat{a}}_{\hat{\mu}}(x)\,dx^{\hat{\mu}}$ is the vielbein one-form, $\Tfhn{a}{}$ and $\Rfhn{a}{}{b}{}$ are the torsion and curvature two-forms respectively, defined by
+where $\vifhn{a}{} \equiv \vih^{\hat{a}}_{\hat{\mu}}\,dx^{\hat{\mu}}$ is the vielbein one-form, $\Tfhn{a}{}$ and $\Rfhn{a}{}{b}{}$ are the torsion and curvature two-forms respectively, defined by
 \begin{align}
- \Tfhn{a}{} &= \frac{1}{2!}\hat{\T}_{\hat{\mu}}{}^{\hat{a}}{}_{\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}}\\
+ \Tfhn{a}{} &= \frac{1}{2!}\hat{\T}_{\hat{\mu}}{}^{\hat{a}}{}_{\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}},\\
  \Rfhn{a}{}{b}{} &= \frac{1}{2!}\Rh^{\hat{a}\hat{b}}{}_{\hat{\mu}\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}}.
 \end{align}
 
@@ -80,8 +80,8 @@ with $\Lag_\Psi$ the Dirac Lagrangian from Eq.~\eqref{coordinateaction}. The sec
 \label{torsion}
  \Th_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} = -\, \frac{\kappa_*^2}{2}\sum_{r}\bar{\Psi}_r\gamma_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}}\Psi_r.
 \end{align}
-
-One could notice that gravity and fermions in CEF leads to a completely antisymmetric torsion tensor. Using Eq.~\eqref{generalcontorsion} the contorsion tensor can be found
+%% One could notice that gravity and fermions in CEF leads to a completely antisymmetric torsion tensor. 
+Using Eq.~\eqref{generalcontorsion} the contorsion tensor is  found to be
 \begin{align}
 \label{contorsionfound}
 \hat{\K}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} &= + \frac{\kappa_*^2}{4}\sum_{r}\bar{\Psi}_r\gamma_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}}\Psi_r.
