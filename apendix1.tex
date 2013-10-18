@@ -11,9 +11,10 @@ where the usefull definition $\gamma^{\hat{a}_1\ldots \hat{a}_r} = \gamma^{[\hat
 \gs = \frac{1}{D\,!}i^{-(m+1)}\epsilon^{\hat{a}_1\ldots \hat{a}_D}\gamma_{\hat{a}_1\ldots \hat{a}_D}
 \end{equation}
 where the convention $\epsilon^{012\ldots(D-1)} = 1$ has been used. $\gs$ is well known in physics literature as $\gamma^{D+1}$ (for example, in $D=4$ is the familiar $\gamma^5$ matrix), with $\Tr{\left[\gs\right]}=0$ and $\left(\gs\right)^2 = +\1$. Using the definition  of $\gamma^{\hat{a}_1\ldots\hat{a}_r}$ and $\gs$ one can show the following identity
-\begin{equation}
-\gamma^{\hat{a}_1\ldots \hat{a}_r} = (-i)^{m+1}\,\frac{1}{(D-r)!}\epsilon^{\hat{a}_r \hat{a}_{r-1}\ldots \hat{a}_1 \hat{b}_1\ldots \hat{b}_{D-r}}\gamma_{\hat{b}_1\ldots \hat{b}_D}\gs 
-\end{equation}
+\begin{align}
+\nonumber
+\gamma^{\hat{a}_1\ldots \hat{a}_r} &= (-i)^{m+1}\,\frac{1}{(D-r)!}\epsilon^{\hat{a}_r \hat{a}_{r-1}\ldots \hat{a}_1 \hat{b}_1\ldots \hat{b}_{D-r}}\\ &\qquad\times\,\gamma_{\hat{b}_1\ldots \hat{b}_D}\gs 
+\end{align}
 
 For example, let's consider $D=2m$ dimensional space, and $r=3$
 \begin{align}
@@ -23,7 +24,7 @@ For example, let's consider $D=2m$ dimensional space, and $r=3$
 now, contracting this two totally antisymmetric tensors
 \begin{align}
 \nonumber
-\gamma^{\hat{a}\hat{b}\hat{c}}\gamma_{\hat{a}\hat{b}\hat{c}} &= (-i)^{2(m+1)}\,\frac{1}{\left((D-3)!\right)^2}\\ &\times\,\epsilon^{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\epsilon_{\hat{a}\hat{b}\hat{c}\,\hat{b}_1\ldots \hat{b}_{D-3}}\gamma_{\hat{a}_1\ldots \hat{a}_{D-3}}\gs\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs
+\gamma^{\hat{a}\hat{b}\hat{c}}\gamma_{\hat{a}\hat{b}\hat{c}} &= (-i)^{2(m+1)}\,\frac{1}{\left((D-3)!\right)^2} \epsilon^{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\\ &\times\,\epsilon_{\hat{a}\hat{b}\hat{c}\,\hat{b}_1\ldots \hat{b}_{D-3}} \gamma_{\hat{a}_1\ldots \hat{a}_{D-3}}\gs\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs
 \end{align}
 one can use the identity 
 \begin{align}
@@ -56,7 +57,8 @@ Let consider the particular case with $r=3$, with this
 \end{align}
 with this, and contracting both antisymmetric product of gamma matrices, one found
 \begin{align}
-\ghhhu{a}{b}{c}\ghhhd{a}{b}{c} &= \frac{i^{(2m+2)}}{\left((D-3)!\right)^2}\epsilon^{\hat{a}\hat{b}\hat{c}\hat{c}_4\ldots\hat{c}_D}\epsilon_{\hat{a}\hat{b}\hat{c}\hat{d}_4\ldots\hat{d}_D}\gamma_{\hat{c}_D\ldots\hat{c}_4}\gamma^{\hat{d}_D\ldots\hat{d}_4}
+\nonumber
+\ghhhu{a}{b}{c}\ghhhd{a}{b}{c} &= \frac{i^{(2m+2)}}{\left((D-3)\right)^2}\epsilon^{\hat{a}\hat{b}\hat{c}\hat{c}_4\ldots\hat{c}_D}\epsilon_{\hat{a}\hat{b}\hat{c}\hat{d}_4\ldots\hat{d}_D}\\ &\qquad\times\gamma_{\hat{c}_D\ldots\hat{c}_4}\gamma^{\hat{d}_D\ldots\hat{d}_4}
 \end{align}
 using the identity 
 \begin{align}
