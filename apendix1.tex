@@ -1,44 +1,51 @@
 \section{\label{sec:cliff}Clifford Algebras}
 
 \subsection{Even-dimensional Clifford algebra}
-The full basis for Clifford algebra on general $D$ even dimensions, with $D=2m$ can be expanded using
+The  Clifford algebra on a general even $D$-dimensional, with $D=2m$ is  expanded by
 \begin{equation}
-  \{ \Gamma^A = \1,\gamma^{\hat{a}_1},\gamma^{\hat{a}_1\hat{a}_2},\ldots,\gamma^{\hat{a}_1\ldots \hat{a}_D} \}
+  \Gamma^A = \left\{  \1,\gamma^{\hat{a}_1},\gamma^{\hat{a}_1\hat{a}_2},\ldots,\gamma^{\hat{a}_1\ldots \hat{a}_D} \right\}
 \end{equation}
-where the usefull definition $\gamma^{\hat{a}_1\ldots \hat{a}_r} = \gamma^{[\hat{a}_1}\ldots\gamma^{\hat{a}_r]}$ has been used. Now, one can define the highest rank Clifford algebra element, 
+where  $\gamma^{\hat{a}_1\ldots \hat{a}_r} = \gamma^{[\hat{a}_1}\ldots\gamma^{\hat{a}_r]}$ has been defined. %% Now, one can define the highest rank Clifford algebra element, 
+On  even dimensions, a chirality element can be defined by
 \begin{equation}
   \label{gs}
-  \gs = \frac{1}{D\,!}i^{-(m+1)}\epsilon^{\hat{a}_1\ldots \hat{a}_D}\gamma_{\hat{a}_1\ldots \hat{a}_D}
+  \gs = \frac{1}{D!}\imath^{-(m+1)}\epsilon_{\hat{a}_1\ldots \hat{a}_D}\gamma^{\hat{a}_1\ldots \hat{a}_D}
 \end{equation}
-where the convention $\epsilon^{012\ldots(D-1)} = 1$ has been used. $\gs$ is well known in physics literature as $\gamma^{D+1}$ (for example, in $D=4$ is the familiar $\gamma^5$ matrix), with $\Tr{\left[\gs\right]}=0$ and $\left(\gs\right)^2 = +\1$. Using the definition  of $\gamma^{\hat{a}_1\ldots\hat{a}_r}$ and $\gs$ one can show the following identity
+where the convention $\epsilon_{012\ldots(D-1)} = 1$ has been used. The matrix representation of $\gs$ is  known in physics literature as $\gamma^{D+1}$; for example, in $D=4$ is the familiar $\gamma^5$ matrix. Additionally, the chiral element satisfies $\Tr{\left[\gs\right]}=0$ and $\left(\gs\right)^2 = +\1$. 
+
+From  the definition  of $\gamma^{\hat{a}_1\ldots\hat{a}_r}$ and $\gs$ it  can be shown that
 \begin{equation}
-  \gamma^{\hat{a}_1\ldots \hat{a}_r} = (-i)^{m+1}\,\frac{1}{(D-r)!}\epsilon^{\hat{a}_r \hat{a}_{r-1}\ldots \hat{a}_1 \hat{b}_1\ldots \hat{b}_{D-r}}\gamma_{\hat{b}_1\ldots \hat{b}_D}\gs 
+  \gamma^{\hat{a}_1\ldots \hat{a}_r} = \frac{(-\imath)^{m+1}}{(D-r)!}\epsilon^{\hat{a}_r \hat{a}_{r-1}\ldots \hat{a}_1 \hat{b}_1\ldots \hat{b}_{D-r}}\gamma_{\hat{b}_1\ldots \hat{b}_D}\gs .
 \end{equation}
 
-For example, let's consider $D=2m$ dimensional space, and $r=3$
+Then, %%For example, let's consider $D=2m$ dimensional space, and 
+for $r=3$ one obtains
 \begin{align}
-  \gamma^{\hat{a}\hat{b}\hat{c}} &= (-i)^{m+1}\,\frac{1}{(D-3)!}\epsilon^{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\gamma_{\hat{a}_1\ldots \hat{a}_{D-3}}\gs \\
-  \gamma_{\hat{a}\hat{b}\hat{c}} &= (-i)^{m+1}\,\frac{1}{(D-3)!}\epsilon_{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\gamma^{\hat{a}_1\ldots \hat{a}_{D-3}}\gs 
+  \gamma^{\hat{a}\hat{b}\hat{c}} &= \frac{(-\imath)^{m+1}}{(D-3)!}\epsilon^{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\gamma_{\hat{a}_1\ldots \hat{a}_{D-3}}\gs, \\
+  \gamma_{\hat{a}\hat{b}\hat{c}} &= \frac{(-\imath)^{m+1}}{(D-3)!}\epsilon_{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\gamma^{\hat{a}_1\ldots \hat{a}_{D-3}}\gs. 
 \end{align}
-now, contracting this two totally antisymmetric tensors
+Contracting these antisymmetric tensors, one gets
 \begin{align}
   \nonumber
-  \gamma^{\hat{a}\hat{b}\hat{c}}\gamma_{\hat{a}\hat{b}\hat{c}} &= (-i)^{2(m+1)}\,\frac{1}{\left((D-3)!\right)^2}\\ &\times\,\epsilon^{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\epsilon_{\hat{a}\hat{b}\hat{c}\,\hat{b}_1\ldots \hat{b}_{D-3}}\gamma_{\hat{a}_1\ldots \hat{a}_{D-3}}\gs\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs
+  (\gamma^{\hat{a}\hat{b}\hat{c}})(\gamma_{\hat{a}\hat{b}\hat{c}}) &= \frac{1}{(D-3)!^2}\epsilon^{\hat{a}\hat{b}\hat{c}\hat{a}_1\ldots \hat{a}_{D-3}}\epsilon_{\hat{a}\hat{b}\hat{c}\hat{b}_1\ldots \hat{b}_{D-3}}\notag\\
+  &\qquad \gamma_{\hat{a}_1\ldots \hat{a}_{D-3}}\gs\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs
 \end{align}
-one can use the identity 
+and using  the identity 
 \begin{align}
-  \epsilon^{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\epsilon_{\hat{a}\hat{b}\hat{c}\,\hat{b}_1\ldots \hat{b}_{D-3}} = -3!\delta^{\hat{a}_1}_{[\hat{b}_1}\ldots \delta^{\hat{a}_{D-3}}_{\hat{b}_{D-3}]}.
+  \epsilon^{\hat{a}\hat{b}\hat{c}\,\hat{a}_1\ldots \hat{a}_{D-3}}\epsilon_{\hat{a}\hat{b}\hat{c}\,\hat{b}_1\ldots \hat{b}_{D-3}} = -3!\delta^{\hat{a}_1}_{[\hat{b}_1}\ldots \delta^{\hat{a}_{D-3}}_{\hat{b}_{D-3}]},
 \end{align}
-Contracting this last generalized antisymmetric Kronecker delta, and reordering antisymmetric gamma product, one obtain an extra $(D-3)!$, that canceled one of this factor in the denominator. With this, one gets a general relation for even dimension
+%% Contracting this last generalized antisymmetric Kronecker delta, and reordering antisymmetric gamma product, one obtain an extra $(D-3)!$, that canceled one of this factor in the denominator. With this, o
+One finally gets a general relation for even dimension
 \begin{equation}
-  \gamma^{\hat{a}\hat{b}\hat{c}}\gamma_{\hat{a}\hat{b}\hat{c}} = \frac{i^{(2m+2)}}{(D-3)!}\,(-3!)\gamma_{\hat{b}_1\ldots \hat{b}_{D-3}}\gs\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs.
+  (\gamma^{\hat{a}\hat{b}\hat{c}})(\gamma_{\hat{a}\hat{b}\hat{c}}) = -\frac{3!}{(D-3)!}(\gamma_{\hat{b}_1\ldots \hat{b}_{D-3}}\gs)(\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs).
 \end{equation}
 
-In the particular case of $D=4$ ($m=2$), one can write
+%% In the particular  case of $D=4$ ($m=2$)
+Particularly, in four dimensions one can write
 \begin{equation}
-  \gamma^{\hat{a}\hat{b}\hat{c}}\gamma_{\hat{a}\hat{b}\hat{c}} = + 6\gamma_a\gs\gamma^a\gs
+  (\gamma^{\hat{a}\hat{b}\hat{c}})(\gamma_{\hat{a}\hat{b}\hat{c}}) =  6(\gamma_{\hat{d}}\gs)(\gamma^{\hat{d}}\gs)
 \end{equation}
-where $a$ index without hat, denotes the $D=2m$ tangent space coordinates and the definition for $\gs$ is in Eq.~\eqref{gs}
+%% where $a$ index without hat, denotes the $D=2m$ tangent space coordinates and the definition for $\gs$ is in Eq.~\eqref{gs}
 
 \subsection{Odd-dimensional Clifford algebra}
 The main idea is construct the $D=2m+1$ dimensional Clifford algebra, using the $D=2m$ dimensional one, and the highest rank Clifford algebra element $\gs$. Expanding the basis for $D=2m+1$,
