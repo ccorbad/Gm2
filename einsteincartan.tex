@@ -14,9 +14,16 @@ where $\etah{a}{b} = \diag{\left(-,+,+,+,\ldots,+\right)}$ is the Minkowski metr
 \end{equation}
 one defines the covariant derivative for fermions and the covariant volume element. This is achieved by replacing
 \begin{equation}
-S_\Psi = \int d^Dx\,|\hat{e}|\,\Lag\left(\Psi,D_{\hat{a}}\Psi\right),
+  S_\Psi = \int \dv[D]%d^Dx\,|\hat{e}|
+  \,\Lag\left(\Psi,D_{\hat{a}}\Psi\right),
 \end{equation}
-where $d^Dx\,|\hat{e}| = d^Dx\,\sqrt{|\hat{g}|}$ is the covariant volume element, $|\hat{e}|=\det{\left(\vih^{\hat{a}}_{\hat{\mu}}\right)}$ is the determinant of the $D$-dimensional vielbein and
+where \dv[D] %$$=d^Dx\,|\hat{e}| = d^Dx\,\sqrt{|\hat{g}|},$$ 
+is the covariant volume element defined by
+\begin{align}
+  \dv[D]=d^D\! x\,|\hat{e}|= d^D\! x\,\sqrt{|\hat{g}|},
+\end{align}
+with $|\hat{e}|$ %=\det{\left(\vih^{\hat{a}}_{\hat{\mu}}\right)}$ 
+the determinant of the $D$-dimensional vielbein and
 \begin{equation}
 \label{covder}
  D_{\hat{a}}\Psi = \hat{E}_{\hat{a}}^{\hat{\mu}}D_{\hat{\mu}}\Psi = \hat{E}_{\hat{a}}^{\hat{\mu}}\left(\partial_{\hat{\mu}}\Psi + \frac{1}{4}(\omega_{\hat{\mu}})^{\hat{b}\hat{c}}\gamma_{\hat{b}\hat{c}}\Psi\right)
@@ -56,12 +63,12 @@ The following action will be considered
  \label{formaction}
  &\qquad- m\bar{\Psi}_r\Psi_r\,\frac{\epsilon_{\hat{a}_1\ldots\hat{a}_D}}{D!}\vifh^{\hat{a}_1}\wedge\ldots\wedge\vifh^{\hat{a}_D}\bigg)
 \end{align}
-where $\kappa_*^2 = 8\pi G_N^* = M_*^{-(2+n)}$ ($G_N^*$ and $M_*$ are the Newtonian gravity constant and the reduced Planck mass on $D = 4 + n$ dimensions respectively). In the fermionic sector $\Psi_r$ denotes the spinor field of flavor $r$ on the $D$-dimensional spacetime with $2^{[D/2]}$ components. The definitions $\gf = \gamma_{\hat{a}_1}\vifh^{\hat{a}_1}$ and $\Df\Psi = D_{\hat{b}_1}\Psi\,\vifh^{\hat{b}_1}$ has been used and $\hodge\gf$ denotes {\it{Hodge Dual}} of $\gf$. The adventage of using differential forms, is that this formalism is coordinate independent and the equations of motion are easily found. The action in Eq.~\eqref{formaction} is equivalent to
+where $\kappa_*^2 = 8\pi G_* = M_*^{-(2+n)}$ ($G_*$ and $M_*$ are the Newtonian gravity constant and the reduced Planck mass on $D = 4 + n$ dimensions respectively). In the fermionic sector $\Psi_r$ denotes the spinor field of flavor $r$ on the $D$-dimensional spacetime with $2^{[D/2]}$ components. The definitions $\gf = \gamma_{\hat{a}_1}\vifh^{\hat{a}_1}$ and $\Df\Psi = (D_{\hat{b}_1}\Psi)\,\vifh^{\hat{b}_1}$ has been used and $\hodge\gf$ denotes {\it{Hodge Dual}} of $\gf$. The adventage of using differential forms, is that this formalism is coordinate independent and the equations of motion are easily found. The action in Eq.~\eqref{formaction} is equivalent to
 \begin{align}
 \nonumber
- S &= \frac{1}{2\kappa_*^2}\int d^Dx\,|\hat{e}|\,\hat{\R} \\ 
+ S &= \frac{1}{2\kappa_*^2}\int \dv[D]\,\hat{\R} \\ 
  \nonumber
- &\quad -\sum_{r}\int d^Dx\,|\hat{e}|\,\bigg(\frac{1}{2}\left(\bar{\Psi}_r\gamma^{\hat{a}}D_{\hat{a}}\Psi_r - D_{\hat{a}}\bar{\Psi}\gamma^{\hat{a}}\Psi\right)\\
+ &\quad -\sum_{r}\int \dv[D]\,\bigg(\frac{1}{2}\left(\bar{\Psi}_r\gamma^{\hat{a}}D_{\hat{a}}\Psi_r - D_{\hat{a}}\bar{\Psi}\gamma^{\hat{a}}\Psi\right)\\
   \label{coordinateaction}
  &\qquad + m\bar{\Psi}_r\Psi_r\bigg).
 \end{align}
@@ -95,7 +102,7 @@ Equation of motion of the spin connection is a constraint, therefore it can be s
 Replacing Eq.~\eqref{contorsionfound} in gravity sector leads to  
 \begin{align}
  \label{gravdecomp}
- \Rfhn{a}{1}{a}{2} &= \Rfhnfree{a}{1}{a}{2} + \free{\Df}\Kfhn{a}{1}{a}{2} + \Kfhnud{a}{1}{b}{}\wedge\Kfhn{b}{}{a}{2}.
+ \Rfhn{a}{1}{a}{2} = \Rfhnfree{a}{1}{a}{2} + \free{\Df}\Kfhn{a}{1}{a}{2} + \Kfhnud{a}{1}{b}{}\wedge\Kfhn{b}{}{a}{2}.
 \end{align}
 For Dirac fermions, this replacement adds a contribution in the covariant derivative 
 \begin{align}
@@ -105,7 +112,7 @@ For Dirac fermions, this replacement adds a contribution in the covariant deriva
 Inserting these conditions into the initial action, one finds
 \begin{align}
 \label{4FI}
- S =\; & \free{S}_\text{grav} + \free{S}_\Psi + \frac{\kappa_* ^2}{32}\sum_{r,s}\int d^Dx|\hat{e}|\,\bar{\Psi}_r\gamma^{\hat{a}\hat{b}\hat{c}}\Psi_r\,\bar{\Psi}_s\gamma_{\hat{a}\hat{b}\hat{c}}\Psi_s
+ S = \free{S}_\text{grav} + \free{S}_\Psi + \frac{\kappa_* ^2}{32}\sum_{r,s}\int \dv[D]\,\bar{\Psi}_r\gamma^{\hat{a}\hat{b}\hat{c}}\Psi_r\,\bar{\Psi}_s\gamma_{\hat{a}\hat{b}\hat{c}}\Psi_s
 \end{align}
 
 
