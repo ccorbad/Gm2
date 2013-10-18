@@ -1,4 +1,5 @@
 \section{Extra dimensions scenario}
+
 \subsection{Motivations}
 
 In the previous section, a four fermion interaction due torsion has been found. One  problem with this interaction is that if one consider a four-dimensional scenario, the coupling constant $\kappa^2$ is suppressed by the four-dimensional Planck mass. 
@@ -19,29 +20,29 @@ where $\psi$ and $x$ represent the four-dimensional spinor and coordinate system
 In the following the  RS metric  will be consider~\cite{Randall:1999ee}
 \begin{align}
   \label{RSmetric}
-  ds^2 = e^{-2k|y|}\eta_{\mu\nu}dx^\mu\,dx^\nu + dy^2.
+  ds^2 = e^{-2k\abs{y}}\eta_{\mu\nu}dx^\mu\,dx^\nu + dy^2.
 \end{align}
 
-In this scenario, the fifth dimension $y$ is compactified on an orbifold, $S^1/\mathbb{Z}_2$ of radius $R$ in the interval $0\leq y\leq \pi R$. The SM fields are localized on IR brane (this set up, is similar to Ref.~\cite{Gherghetta:2000qt,Gherghetta:2006ha} but with four fermion interaction coming from torsionful manifold). One can identify the $5$-dimensional vielbein directly from Eq.~\eqref{RSmetric} 
+In this scenario, the fifth dimension $y$ is compactified on an orbifold, $S^1/\mathbb{Z}_2$ of radius $R$ in the interval $0\leq y\leq \pi R$. The SM fields are localized on IR brane (this set up, is similar to Ref.~\cite{Gherghetta:2000qt,Gherghetta:2006ha} but with four fermion interaction coming from torsionful manifold). One can define  the five-dimensional vielbein  from Eq.~\eqref{RSmetric} 
 \begin{align}
   \vifhn{a}{} &\equiv \left(\vifh^{a},\vifh^5\right) = \left(e^{-k|y|}\,dx^\mu,dy\right), 
 \end{align}
-and the invariant volume element can be calculated using 
+and the invariant volume element is %can be calculated using 
 \begin{align}
-  |\hat{e}| = \det{\vih(x)^{\hat{a}}_{\hat{\mu}}} = e^{-4k|y|}.
+  \dv[5]  = d^4x\, dy\;e^{-4k|y|}.
 \end{align}
 Note that the determinant of the vielbein has only dependence on the fifth dimension and can be integrated out when dimensional reduction is performed. 
 
 The Kaluza-Klein (KK) decomposition for gauge and fermionic fields respectively are
 \begin{align}
   \label{KKgaugedecomp}
-  \hat{A}_{\mu}^a(x,y) &= \frac{1}{\sqrt{\pi R}}\sum_{i}h^{i}(y)A_{\mu\,i}^a(x), \\
+  \hat{A}_{\mu}(x,y) &= \frac{1}{\sqrt{\pi R}}\sum_{i}h^{i}(y)A_{\mu}^i(x), \\
   \label{KKspindecomp}
   \Psi(x,y)_r &= \frac{1}{\sqrt{\pi R}}\sum_{i}f_r^{i}(y)\psi_r^{i}(x),
 \end{align}
-where $R$ denotes the typical radius of the extra dimension, and the initial term is introduce as a normalization factor. The extra dimension information of $\Psi_r$ and $\hat{A}_\mu^a$ are enconded by $h^{i}(y)$ and $f_r^{i}(y)$ profiles. The terms $\psi_r^{i}(x)$ and $A_{\mu\,i}^a(x)$ denotes fermion of $r$ flavor and gauge fields on $4D$ spacetime, expanded on KK modes. 
+where $R$ denotes the typical radius of the extra dimension, and the initial term is introduce as a normalization factor. The extra dimension information of $\Psi_r$ and $\hat{A}_\mu^a$ are enconded by $h^{i}(y)$ and $f_r^{i}(y)$ profiles. The terms $\psi_r^{i}(x)$ and $A_{\mu\,i}^a(x)$ denotes fermion of $r$ flavor and gauge fields on four-dimensional  spacetime, expanded on KK modes. 
 
-In the previous KK decomposition for gauge fields, $A_4=0$ has been used. This choice eliminates $A_4$ from the 3-brane but the gauge invariance of the effective action in 4-dimension still remains (see Ref.~\cite{Davoudiasl:1999tf}). 
+In the previous KK decomposition for gauge fields, $A_y=0$ has been used. This choice eliminates $A_y$ from the 3-brane but the gauge invariance of the effective action in four dimensions still remains (see Ref.~\cite{Davoudiasl:1999tf}). 
 
 In the following analysis, only the zero mode of KK gauge and fermionic excitations $h^{(0)}(y)$ and $f_r^{(0)}(y)$ respectively, will be consider. This approach gives only the lower mass of KK tower and allows to search in the threshold of finding extra dimensions, because the upper modes with higher masses will be less accessible.
 
