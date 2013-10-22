@@ -45,7 +45,7 @@ The Kaluza-Klein (KK) decomposition for gauge and fermionic fields respectively 
   \label{KKspindecomp}
   \Psi(x,y)_r &= \frac{1}{\sqrt{\pi R}}\sum_{i}f_r^{i}(y)\psi_r^{i}(x),
 \end{align}
-where $R$ denotes the typical radius of the extra dimension, and the initial term is introduce as a normalization factor. The extra dimension information of $\Psi_r$ and $\hat{A}_\mu^a$ are enconded by $h^{i}(y)$ and $f_r^{i}(y)$ profiles. The terms $\psi_r^{i}(x)$ and $A_{\mu\,i}^a(x)$ denotes fermion of $r$ flavor and gauge fields on four-dimensional  spacetime, expanded on KK modes. 
+where $R$ denotes the typical radius of the extra dimension, and the initial term is introduce as a normalization factor. The extra dimension information of $\Psi_r$ and $\hat{A}_\mu$ are enconded by $h^{i}(y)$ and $f_r^{i}(y)$ profiles. The terms $\psi_r^{i}(x)$ and $A_{\mu\,i}(x)$ denotes fermion of $r$ flavor and gauge fields on four-dimensional spacetime, expanded on KK modes. 
 
 In the previous KK decomposition for gauge fields, $A_y=0$ has been used. This choice eliminates $A_y$ from the 3-brane but the gauge invariance of the effective action in four dimensions still remains (see Ref.~\cite{Davoudiasl:1999tf}). 
 
@@ -53,7 +53,7 @@ In the following analysis, only the zero mode of KK gauge and fermionic excitati
 
 \subsection{Effective theory in four dimensions}
 
-Clifford algebra in five dimensions can be constructed using the four-dimensional one. % plus the chiral gamma matrix defined by $\gamma^5 = i\,\gamma^0\gamma^1\gamma^2\gamma^3$. Using tangent space coordinates, g
+Clifford algebra in five dimensions can be constructed using the four-dimensional one. % plus the chiral gamma matrix defined by $\gamma^* = i\,\gamma^0\gamma^1\gamma^2\gamma^3$. Using tangent space coordinates, g
 Gamma matrices in five-dimensional spacetimes are
 \begin{align}
   \ghu{a} = \left(\gamma^a,\gamma^*\right).
@@ -68,11 +68,15 @@ gives (See Appendix~\ref{sec:cliff}).
 
 If one consider only neutral gauge-fermion coupling in the $5D$ bulk as in Ref.~\cite{Davoudiasl:1999tf}, the interaction reads
 \begin{align}
-  S_{\text{int}} &= -i\sum_{r}\,g_5\int d^5x\,|\hat{e}|\,\bar{\Psi}_r \gamma^{\hat{\mu}}T^a\Psi_r\hat{A}_\mu^a
+  S_{\text{int}} &= -i\sum_{r}\,g_5\int d^5x\,|\hat{e}|\,\bar{\Psi}_r \gamma^{\mu}\Psi_r\hat{A}_\mu
 \end{align}
-where $T^a$ are the generators of Lie algebra associated to the gauge group. Defining the zero KK modes $f_r(y)\equiv f_r^{(0)}(y)$, $h^{(0)}(y)\equiv h(y)$, $\psi_r\equiv\psi_r^{(0)}(x)$ and $A_\mu\equiv A_{\mu\,(0)}(x)$ and considering only this contribution, the previous interaction reads
+where $g_5$ is the gauge coupling coming from the fifth dimension and the identity
 \begin{align}
-  S_{\text{int}} \approx -i \sum_{r}\,g_{\text{eff}}\,\int d^4x\,\bar{\psi}_r\gamma^\mu T^a\psi_r A_\mu^a
+\vih^{\hat{a}}_{\hat{\mu}}\;\hat{E}_{\hat{a}}^{\hat{\nu}} = \delta_{\hat{\mu}}^{\hat{\nu}}
+\end{align}
+has been used. Considering only the contribution due zero KK modes this interaction reads
+\begin{align}
+  S_{\text{int}} \approx -i \sum_{r}\,g_{\text{eff}}\,\int d^4x\,\bar{\psi}_r\gamma^\mu \psi_r A_\mu
 \end{align}
 where the effective coupling
 \begin{align}
@@ -83,17 +87,17 @@ contains all the information of the gauge coupling in the bulk.
 The four fermionic interaction in Eq.~\eqref{4FI} coming from torsion, can be written as
 \begin{align}
   \nonumber
-  S_{4\text{FI}} &= \frac{\kappa_{\text{eff}}^2}{32}\sum_{r,s}\int d^4x\left(6\,\bar{\psi}_{r}\gamma^\mu\gamma^5\psi_{r}\,\bar{\psi}_{s}\gamma_\mu\gamma^5\psi_{s}\right.\\
+  S_{4\text{FI}} &= \frac{\kappa_{\text{eff}}^2}{32}\sum_{r,s}\int d^4x\left(6\,\bar{\psi}_{r}\gamma^\mu\gamma^*\psi_{r}\,\bar{\psi}_{s}\gamma_\mu\gamma^*\psi_{s}\right.\\
   \label{4FI5D}
-  &+\left. 3\,\bar{\psi}_r\gamma^{\mu\nu}\gamma^5\psi_r\,\bar{\psi}_s\gamma_{\mu\nu}\gamma^5\psi_s\right)
+  &+\left. 3\,\bar{\psi}_r\gamma^{\mu\nu}\gamma^*\psi_r\,\bar{\psi}_s\gamma_{\mu\nu}\gamma^*\psi_s\right)
 \end{align}
-where $\kappa_{\text{eff}}^2$ has been defined in terms of the zero modes of KK excitations, from Ref.~\cite{Gherghetta:2000qt}
+where $\kappa_{\text{eff}}^2$ has been defined in terms of the zero modes of KK excitations, from Ref.~\cite{Gherghetta:2006ha}
 \begin{align}
-  k_{\text{eff}}^2 \simeq \frac{k}{M_*^3}\,e^{(4-2c_m-2c_n)\pi kR}.
+  k_{\text{eff}}^2 \simeq \frac{k}{M_*^3}\,e^{2(c_m + c_n-1)\pi kR}.
 \end{align}
-and contains all the extra dimensions information after performing dimensional reduction. A special choice of the profiles can be done from the values obtained on Ref.~\cite{Gherghetta:2006ha}, in order to explore only hierarchy of the gravitation scale $M_*$ on extra dimensions. The choice $c_i\simeq1$ will be used, in order to deal only with the hierarchy of the gravitational scale. With this, one obtain
+and contains all the extra dimensions information after performing dimensional reduction. A special choice of the profiles can be done, in order to explore only hierarchy of the gravitation scale $M_*$ on extra dimensions. The choice $c_i\simeq0$ will be used, in order to deal only with the hierarchy of the gravitational scale. With this, one obtain
 \begin{align}
-  M_{\text{Pl}} \simeq \frac{M_*^3}{k}
+  M_{\text{Pl}}^2 \simeq \frac{M_*^3}{k}\,e^{-2\pi kR}
 \end{align}
 
 For the same reason, the effective coupling of neutral gauge bosons coupled to fermionic current, will be considered equal as the SM in $4D$, (i.e.: $g_{\text{eff}} = e\,Q_f$ for photon exchange and $g_{\text{eff}} = e/(2c_Ws_W)\left(T^3_f - 2\,s_W^2\,Q_f\right)$ for $Z^0$ exchange, where $Q_f$ is electric charge in proton unities, $T_f^3$ is the third component of weak isospin and $s_W(c_W) = \sin(\cos)\theta_W$). 
