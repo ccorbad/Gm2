@@ -29,8 +29,8 @@ for $r=3$ one obtains
 Contracting these antisymmetric tensors, one gets
 \begin{align}
   \nonumber
-  (\gamma^{\hat{a}\hat{b}\hat{c}})(\gamma_{\hat{a}\hat{b}\hat{c}}) &= \frac{1}{(D-3)!^2}\epsilon^{\hat{a}\hat{b}\hat{c}\hat{a}_1\ldots \hat{a}_{D-3}}\epsilon_{\hat{a}\hat{b}\hat{c}\hat{b}_1\ldots \hat{b}_{D-3}}\notag\\
-  &\qquad \gamma_{\hat{a}_1\ldots \hat{a}_{D-3}}\gs\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs
+  (\gamma^{\hat{a}\hat{b}\hat{c}})(\gamma_{\hat{a}\hat{b}\hat{c}}) &= \frac{(-1)^{m+1}}{(D-3)!^2}\epsilon^{\hat{a}\hat{b}\hat{c}\hat{a}_1\ldots \hat{a}_{D-3}}\epsilon_{\hat{a}\hat{b}\hat{c}\hat{b}_1\ldots \hat{b}_{D-3}}\notag\\
+  &\qquad (\gamma_{\hat{a}_1\ldots \hat{a}_{D-3}}\gs)(\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs)
 \end{align}
 and using  the identity 
 \begin{align}
@@ -41,7 +41,6 @@ One finally gets a general relation for even dimension
 \begin{equation}
   (\gamma^{\hat{a}\hat{b}\hat{c}})(\gamma_{\hat{a}\hat{b}\hat{c}}) = (-1)^m \frac{3!}{(D-3)!}(\gamma_{\hat{b}_1\ldots \hat{b}_{D-3}}\gs)(\gamma^{\hat{b}_1\ldots \hat{b}_{D-3}}\gs).
 \end{equation}
-
 %% In the particular  case of $D=4$ ($m=2$)
 Particularly, in four dimensions one can write
 \begin{equation}
@@ -50,13 +49,16 @@ Particularly, in four dimensions one can write
 %% where $a$ index without hat, denotes the $D=2m$ tangent space coordinates and the definition for $\gs$ is in Eq.~\eqref{gs}
 
 \subsection{Odd-dimensional Clifford algebra}
-The main idea is construct the $D=2m+1$ dimensional Clifford algebra, using the $D=2m$ dimensional one, and the highest rank Clifford algebra element $\gs$. Expanding the basis for $D=2m+1$,
+
+%% The main idea is construct the $D=2m+1$ dimensional Clifford algebra, using the $D=2m$ dimensional one, and the highest rank Clifford algebra element $\gs$. Expanding the basis for $D=2m+1$,
+The odd-dimensional Clifford algebra, for  $D=2m+1$,  can be constructing using the generators of the $2m$-dimensional algebra, where the former chiral elements is the new generator,
 \begin{equation}
   \ghu{a} = \left(\gamma^a,\gs\right)
 \end{equation}
-where the notation without hat for previous even dimensions has been used. In this case, one found
+where   unhated indices run over the first $2m$ dimensions. % for previous even dimensions has been used. 
+In this case, one found
 \begin{equation}
-  \gamma^{\hat{a}_1\ldots \hat{a}_r} = \frac{i^{m+1}}{(D-r)!}\epsilon^{\hat{a}_1\ldots\hat{a}_r\hat{a}_{r+1}\ldots\hat{a}_D}\gamma_{\hat{a}_D\ldots\hat{a}_{r+1}}.
+  \gamma^{\hat{a}_1\ldots \hat{a}_r} = \frac{\imath^{m+1}}{(D-r)!}\epsilon^{\hat{a}_1\ldots\hat{a}_r\hat{a}_{r+1}\ldots\hat{a}_D}\gamma_{\hat{a}_D\ldots\hat{a}_{r+1}}.
 \end{equation}
 Let consider the particular case with $r=3$, with this
 \begin{align}
@@ -65,7 +67,8 @@ Let consider the particular case with $r=3$, with this
 \end{align}
 with this, and contracting both antisymmetric product of gamma matrices, one found
 \begin{align}
-  \ghhhu{a}{b}{c}\ghhhd{a}{b}{c} &= \frac{i^{(2m+2)}}{\left((D-3)!\right)^2}\epsilon^{\hat{a}\hat{b}\hat{c}\hat{c}_4\ldots\hat{c}_D}\epsilon_{\hat{a}\hat{b}\hat{c}\hat{d}_4\ldots\hat{d}_D}\gamma_{\hat{c}_D\ldots\hat{c}_4}\gamma^{\hat{d}_D\ldots\hat{d}_4}
+  (\ghhhu{a}{b}{c})(\ghhhd{a}{b}{c}) &= \frac{(-1)^{m+1}}{(D-3)!^2}\epsilon^{\hat{a}\hat{b}\hat{c}\hat{c}_4\ldots\hat{c}_D}\epsilon_{\hat{a}\hat{b}\hat{c}\hat{d}_4\ldots\hat{d}_D}\notag\\
+  & \qquad (\gamma_{\hat{c}_D\ldots\hat{c}_4})(\gamma^{\hat{d}_D\ldots\hat{d}_4})
 \end{align}
 using the identity 
 \begin{align}
@@ -73,17 +76,18 @@ using the identity
 \end{align}
 and contracting, and reordering the antisymmetric product of gamma matrices, one gets (like in even case), a factor of $(D-3)!$ that canceled one factor on the denominator, with this, one gets the general case for odd dimension
 \begin{equation}
-  \ghhhu{a}{b}{c}\ghhhd{a}{b}{c} = \frac{i^{(2m+2)}}{(D-3)!}(-3!)\gamma_{\hat{c}_4\ldots\hat{c}_D}. \gamma^{\hat{c}_4\ldots\hat{c}_D}
+  (\ghhhu{a}{b}{c})(\ghhhd{a}{b}{c}) = (-1)^m \frac{3!}{(D-3)!}(\gamma_{\hat{c}_4\ldots\hat{c}_D})( \gamma^{\hat{c}_4\ldots\hat{c}_D})
 \end{equation}
 
 For example,  taking $D=5$
 \begin{align}
-  \ghhhu{a}{b}{c}\ghhhd{a}{b}{c} &= +\frac{3!}{2!}\gamma_{\hat{c}\hat{d}}\gamma^{\hat{c}\hat{d}} \\
-  &= 3\left(\gamma_{ab}\gamma^{ab} + \gamma_{a*}\gamma^{a*} + \gamma_{*a}\gamma^{*a}\right)\\
-  &= 3\left(\gamma_{ab}\gamma^{ab} + 2\gamma_{a*}\gamma^{a*}\right)
+  (\ghhhu{a}{b}{c})(\ghhhd{a}{b}{c})% &= +\frac{3!}{2!}(\gamma_{\hat{c}\hat{d}})(\gamma^{\hat{c}\hat{d}}) \\
+  %% &= 3\left(\gamma_{ab}\gamma^{ab} + \gamma_{a*}\gamma^{a*} + \gamma_{*a}\gamma^{*a}\right) \notag\\
+  &= 3(\gamma_{ab})(\gamma^{ab}) + 6(\gamma_{a*})(\gamma^{a*})\notag\\
+  %% \end{align}
+  %% one can multiply by one $\left(\gs\right)^2 = \1$, the tensorial part and reordering one gets
+  %% \begin{equation}
+  %% \ghhhu{a}{b}{c}\ghhhd{a}{b}{c} 
+  &= 6(\gamma_a\gs)(\gamma^a\gs) + 3(\gamma_{ab}\gs)(\gamma^{ab}\gs)
 \end{align}
-one can multiply by one $\left(\gs\right)^2 = \1$, the tensorial part and reordering one gets
-\begin{equation}
-  \ghhhu{a}{b}{c}\ghhhd{a}{b}{c} = 6\gamma_a\gs\gamma^a\gs + 3\gamma_{ab}\gs\gamma^{ab}\gs
-\end{equation}
 
