@@ -1,9 +1,6 @@
-\section{Constraints from precision tests}
-In this section, our aim is to compare the theoretical results obtained in the last section with values from precision tests. From these values, one could constraints the scale for new physics coming from extra dimensions scenarios.
-
-\subsection{$Z^0$ boson width decay}
-
-One of the most well known value, with excelent statistics and precision measurement is the $Z^0$ width decay. Considering the most general current $J^\mu(p,p')$ in Eq.~\eqref{current}, the width decay of $Z^0$ into electrons can be decomposed
+\section{Constraints from precision tests: $Z^0$ boson width decay}
+\label{sec:constraints}
+In this section, our aim is to compare the theoretical results obtained in the last section with values from precision tests. From these values, one could constraints the scale for new physics coming from extra dimensions scenarios. One of the most well known values, with excellent statistic and precision measurement is the $Z^0$ width decay. Considering the most general current $J^\mu(p,p')$ in Eq.~\eqref{current}, the width decay of $Z^0$ into electrons can be decomposed
 \begin{align}
 \Gamma_{\text{teo}}\left(Z^0\rightarrow e^+\,e^-\right) &= \Gamma_{\text{SM}} + \delta\Gamma_{\text{4FI}}
 \end{align}
@@ -12,18 +9,17 @@ where
  \Gamma_{\text{SM}} &= \alpha M_Z\left[\frac{a_e^Z}{2s_Wc_W}(T_e^f - 2Q_f\,s_W^2)\right] 
 \end{align}
 is the the tree level contribution $Z^0$ boson width decay and
-\begin{widetext}
 \begin{align}
 \nonumber
-  \delta\Gamma_{\text{4FI}} &= \frac{\alpha M_Z}{3\,s_Wc_W}\left[(T_3^f - 2Q_f\,s_W^2+s_wc_wa_e^Z)\delta F_V^Z(M_Z^2) + T_3^f\delta F_A^Z(M_Z^2) + \left(\frac{1}{2}(T_3^f - 2Q_f\,s_W^2) +\frac{M_Z^2}{4m_e^2}a_e^Z\right)\delta F_M^Z(M_Z^2)\right]
+  \delta\Gamma_{\text{4FI}} &= \frac{\alpha M_Z}{3\,s_Wc_W}\Bigg[(T_3^f - 2Q_f\,s_W^2+s_Wc_Wa_e^Z)\delta F_V^Z(M_Z^2)\\
+  &\quad + T_3^f\delta F_A^Z(M_Z^2)\Bigg]
 \end{align}
-\end{widetext}
-is the contribution due radiative correction at one loop. 
+is the contribution due radiative correction at one loop in a effective theory coming from extra dimension scenario with four fermion interaction due torsionful manifold.
 
 Considering electron and positron in the final state and evaluating form factors and $\alpha$ at $Z^0$ pole, one obtain 
 \begin{align}
 \label{deltagammateo}
- \delta\Gamma_{\text{4FI}} &= -1.79777\times10^8\,[\text{GeV}]\left(\frac{[\text{GeV}]}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{\mu^2}\right).
+ \delta\Gamma_{\text{4FI}} &= -1.95982\times10^7\,[\text{MeV}]\left(\frac{[\text{GeV}]}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{M_Z^2}\right).
 \end{align}
 
 The best updated values of $Z^0$ boson width decay into electron positron come from Ref.~\cite{Beringer:1900zz}
@@ -33,60 +29,88 @@ The best updated values of $Z^0$ boson width decay into electron positron come f
 \end{align}
 and the effects of physics Beyond The Standard Model (BSM) has to be included (at least) in the experimental error $\delta\Gamma_{\text{exp}}$. Comparing Eq.~\eqref{deltagammateo} with Eq.~\eqref{deltagammaexp} one obtain a transcendental equation for the scale $\Lambda$ of physics BSM. Using the constraint $\delta\Gamma_{\text{exp}} \geq \delta\Gamma_{\text{4FI}}$ leads to
 \begin{align}
-4.7837\times10^{-13}\leq\left(\frac{[\text{GeV}]}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{\mu^2}\right)
+\label{trascendental}
+4.388\times10^{-9}\leq\left(\frac{[\text{GeV}]}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{M_Z^2}\right)
 \end{align}
 that has solutions
 \begin{eqnarray}
  \label{lowscalefromz}
- \Lambda_1^{Z} \leq&\; \pm0.17307\;&[\text{TeV}], \\
+ \Lambda_1^{Z} \leq&\; \pm0.09119\;&[\text{TeV}], \\
  \label{upscalefromz}
- \Lambda_2^{Z} \geq&\; \pm6.64309\times10^3\;&[\text{TeV}].
+ \Lambda_2^{Z} \geq&\; \pm53.9364\;&[\text{TeV}].
 \end{eqnarray}
-
 Restricting only to positive energy scales, $\Lambda_1^Z$ is excluded by the experiments (see Ref.~\cite{Chatrchyan:2013muj}). Using this fact the scale for physics BSM coming from precision measuments of $Z^0$ boson width decay
 \begin{align}
- \Lambda_Z &\geq 6.64309\times10^3\;[\text{TeV}].
+ \Lambda_Z &\geq 53.9364\;[\text{TeV}].
 \end{align}
+\begin{figure}[H]
+ \includegraphics[scale=.34]{excl.eps}
+ \caption{Exclusion limits for $\Lambda$ using the SM precision tests of $Z^0$ boson width decay. Blue curve line denotes $\delta\Gamma_{\text{4FI}}$ coming from torsionful extra dimension theory and the red straight one denotes $\delta\Gamma_{\text{exp}}$ obtained in SM precision tests. Shaded region denotes the error range of experimental data and is the allowed region for the solutions.}
+\end{figure}
 
+This limits are consistents with Ref.~\cite{Chang:2000yw} but are more stronger than $\Lambda \geq 28\,[\text{TeV}]$ found in the context of Universal Extra Dimensions (UED) studied in the referred work.
 
-
-\subsection{Electron $g-2$}
-
-Electron $g-2$ is also a well-known observable with high precision measurement and is related with magnetic form factor via
+Now comparing with the effective coupling coming from large extra dimension scenario, one find 
 \begin{align}
-\label{gm2}
-\delta F_M^\gamma(k^2=0) &= a_e^\gamma \equiv \frac{1}{2}\left(g_e-2\right)
+ \frac{\kappa_{\text{eff}}^2}{32} \longleftrightarrow \frac{1}{\Lambda^2}
 \end{align}
-where $g_e$ is the anomalous magnetic moment of the electron. Considering SM and torsion contributions, Eq.~\eqref{gm2} can be decomposed
+this comparison leads to the constraint
 \begin{align}
-a_e^\gamma &= a_{\text{SM}}^\gamma + \delta a_{e\,\text{4FI}}^\gamma
-\end{align}
-where $\delta F_M^\gamma(k^2=0) = \delta a_{e\,\text{4FI}}^\gamma$ denotes the contribution due radiative correction involving theory with four fermion interaction due torsion. 
-
-Considering electrons in the t-channel of Eq.~\eqref{feyndiagram} with all possible fermions running into the loop, the contribution due torsion to $a_e^\gamma$ gives
-\begin{align}
-\label{aeteo}
- \delta a_e^\gamma &= 0.22041\,\left(\frac{\text{GeV}}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{\mu^2}\right).
+\label{parconst}
+\left(\frac{M_*^3}{k}\right)^{\frac{1}{2}}\geq \left\{ \begin{matrix}
+                                                        5.0801\times10^{-7}\;[\text{TeV}]& \text{if} & c_i\simeq0 \\
+                                                        7.5874\times10^{-2}\; [\text{TeV}]& \text{if} & c_i\simeq1/2 \\
+                                                        1.9462\;[\text{TeV}]& \text{if} & c_i\simeq1 \\
+                                                       \end{matrix} \right.
 \end{align}
 
-The best updated data of electron $g-2$ are obtained in Ref.~\cite{Hanneke:2008tm} and also in Ref.~\cite{Beringer:1900zz}
-\begin{align}
-\label{aeexp}
- a_e^\gamma &= (1159.65218076\pm0.00000028)\times10^{-6} 
-\end{align}
-where one can decompose $a_e^\gamma = a_{e\,\text{SM}_\text{exp}}^\gamma + \delta a_{e\,\text{exp}}^\gamma$. Similar to $Z^0$ boson width decay, physics BSM has to be included (at least) in the experimental error $\delta a_{e\,\text{exp}}^\gamma$. Comparing Eq.~\eqref{aeteo} with Eq.~\eqref{aeexp} one obtain a transcendental equation for the scale of physics BSM. Using the constraint $\delta a_{e\,\text{exp}}^\gamma\geq\delta a_{e\,\text{4FI}}^\gamma$ leads to
-\begin{align}
-1.22498\times10^{-12} \leq \left(\frac{[\text{GeV}]}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{\mu^2}\right) 
-\end{align}
-that has solutions
-\begin{eqnarray}
- \label{lowscalefromgm2}
- \Lambda_1^{e} \leq&\; \pm0.17307\;&[\text{TeV}], \\
- \label{upscalefromgm2}
- \Lambda_2^{e} \geq&\; \pm4.053\times10^3\;&[\text{TeV}].
-\end{eqnarray}
 
-Restricting only to positive scales of energy and excluding $\Lambda\leq0.17307\;[\text{TeV}]$ from Ref.~\cite{Chatrchyan:2013muj} one find a scale for physics BSM coming from electron $g-2$ experiment 
-\begin{align}
- \Lambda_e &\geq 4.053\times10^3\;[\text{TeV}].
-\end{align}
+% \subsection{Electron $g-2$}
+% 
+% Electron $g-2$ is also a well-known observable with high precision measurement and is related with magnetic form factor via
+% \begin{align}
+% \label{gm2}
+% \delta F_M^\gamma(k^2=0) &= a_e^\gamma \equiv \frac{1}{2}\left(g_e-2\right)
+% \end{align}
+% where $g_e$ is the anomalous magnetic moment of the electron. Considering SM and torsion contributions, Eq.~\eqref{gm2} can be decomposed
+% \begin{align}
+% a_e^\gamma &= a_{\text{SM}}^\gamma + \delta a_{e\,\text{4FI}}^\gamma
+% \end{align}
+% where $\delta F_M^\gamma(k^2=0) = \delta a_{e\,\text{4FI}}^\gamma$ denotes the contribution due radiative correction involving theory with four fermion interaction due torsion. 
+% 
+% Considering electrons in the t-channel of Eq.~\eqref{feyndiagram} with all possible fermions running into the loop, the contribution due torsion to $a_e^\gamma$ gives
+% \begin{align}
+% \label{aeteo}
+%  \delta a_e^\gamma &= 0.22041\,\left(\frac{\text{GeV}}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{\mu^2}\right).
+% \end{align}
+% 
+% The best updated data of electron $g-2$ are obtained in Ref.~\cite{Hanneke:2008tm} and also in Ref.~\cite{Beringer:1900zz}
+% \begin{align}
+% \label{aeexp}
+%  a_e^\gamma &= (1159.65218076\pm0.00000028)\times10^{-6} 
+% \end{align}
+% where one can decompose $a_e^\gamma = a_{e\,\text{SM}_\text{exp}}^\gamma + \delta a_{e\,\text{exp}}^\gamma$. Similar to $Z^0$ boson width decay, physics BSM has to be included (at least) in the experimental error $\delta a_{e\,\text{exp}}^\gamma$. Comparing Eq.~\eqref{aeteo} with Eq.~\eqref{aeexp} one obtain a transcendental equation for the scale of physics BSM. Using the constraint $\delta a_{e\,\text{exp}}^\gamma\geq\delta a_{e\,\text{4FI}}^\gamma$ leads to
+% \begin{align}
+% 1.22498\times10^{-12} \leq \left(\frac{[\text{GeV}]}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{\mu^2}\right) 
+% \end{align}
+% that has solutions
+% \begin{eqnarray}
+%  \label{lowscalefromgm2}
+%  \Lambda_1^{e} \leq&\; \pm0.17307\;&[\text{TeV}], \\
+%  \label{upscalefromgm2}
+%  \Lambda_2^{e} \geq&\; \pm4.053\times10^3\;&[\text{TeV}].
+% \end{eqnarray}
+% 
+% Restricting only to positive scales of energy and excluding $\Lambda\leq0.17307\;[\text{TeV}]$ from Ref.~\cite{Chatrchyan:2013muj} one find a scale for physics BSM coming from electron $g-2$ experiment 
+% \begin{align}
+%  \Lambda_e &\geq 4.053\times10^3\;[\text{TeV}].
+% \end{align}
+% 
+% Performing the same analysis on $Z^0$ boson width decay but in this case using electron $g-2$ precision measurements, one gets
+% \begin{align}
+% \left(\frac{M_*^3}{k}\right)^{\frac{1}{2}}\geq \left\{ \begin{matrix}
+%                                                         2.1595\times10^{-4}\;[\text{TeV}]& \text{if} & c_i\simeq0 \\
+%                                                         0.3225\times10^{2}\; [\text{TeV}]& \text{if} & c_i\simeq1/2 \\
+%                                                         0.8273\times10^{3}\;[\text{TeV}]& \text{if} & c_i\simeq1 \\
+%                                                        \end{matrix} \right.
+% \end{align}

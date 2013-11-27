@@ -1,14 +1,15 @@
-\section{Cartan-Einstein theory of gravity with fermions}
-In this section a brief description of Cartan-Einstein Formulation (CEF) of gravity will be done. CEF is constructed in more general way that Einstein-Hilbert one. Spin connection and vielbeins are independent at the beginning and the presence of torsion is also assumed. Including torsion into the picture implies that one will assume nonvanishing antisymmetric part for the affine connection 
+\section{Cartan-Einstein Formalism of Gravity with Fermions}
+\label{sec:CEF}
+In this section a brief description of Cartan-Einstein Formalism (CEF) of gravity will be done. CEF is constructed in more general way that Einstein-Hilbert one. Spin connection and vielbeins are independent at the beginning and the presence of torsion is also assumed. Including torsion into the picture implies that one will assume nonvanishing antisymmetric part for the affine connection 
 \begin{align}
- \hat{T}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} \equiv \hat{\Gamma}_{[\hat{a}}{}^{\hat{b}}{}_{\hat{c}]} = \hat{\Gamma}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} - \hat{\Gamma}_{\hat{c}}{}^{\hat{b}}{}_{\hat{a}}
+ \hat{T}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} \equiv 2\hat{\Gamma}_{[\hat{a}}{}^{\hat{b}}{}_{\hat{c}]} = \hat{\Gamma}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} - \hat{\Gamma}_{\hat{c}}{}^{\hat{b}}{}_{\hat{a}}
 \end{align}
 where latin indices with a hat denotes local inertial frame coordinates, running over $D$-dimensions. This local inertial frame is described mathematically by (co)tangent space ($T_P^*M$) $T_PM$ at each point $P$ on the manifold. Tangent space coordinates can be mapped into full $D$-dimensional spacetime coordinates $\hat{\mu}$, endowed with some curved metric $\hat{g}_{\hat{\mu}\hat{\nu}}(x)$, using vielbeins fields and the relation
 \begin{equation}
 \label{metricrelation}
- \hat{g}_{\hat{\mu}\hat{\nu}}(x) = \hat{\eta}_{\hat{a}\hat{b}}\,\vih^{\hat{a}}_{\hat{\mu}}(x)\,\vih^{\hat{b}}_{\hat{\nu}}(x).
+ \hat{g}_{\hat{\mu}\hat{\nu}}(x) = \hat{\eta}_{\hat{a}\hat{b}}\,\vih^{\hat{a}}_{\hat{\mu}}(x)\,\vih^{\hat{b}}_{\hat{\nu}}(x),
  \end{equation}
-where $\etah{a}{b} = \diag{\left(-,+,+,+,\ldots,+\right)}$ is the Minkowski metric in $D$-dimensional spacetime and $\vih(x)^{\hat{a}}_{\hat{\mu}}$ are the vielbein fields. If one wants to add fermionic matter and preserve the local Lorentz invariance of
+where $\etah{a}{b} = \diag{\left(-,+,\ldots,+\right)}$ is the Minkowski metric in $D$-dimensional spacetime and $\vih^{\hat{a}}_{\hat{\mu}}(x)$ are the vielbein fields. If one wants to add fermionic matter and preserve the local Lorentz invariance of
 \begin{equation}
  S_\Psi = \int d^Dx\,\Lag\left(\Psi,\partial_{\hat{\mu}}\Psi\right),
 \end{equation}
@@ -20,7 +21,7 @@ one defines the covariant derivative for fermions and the covariant volume eleme
 where \dv[D] %$$=d^Dx\,|\hat{e}| = d^Dx\,\sqrt{|\hat{g}|},$$ 
 is the covariant volume element defined by
 \begin{align}
-  \dv[D]=d^D\! x\,|\hat{e}|= d^D\! x\,\sqrt{|\hat{g}|},
+  \dv[D]=d^D\! x\,|\hat{e}|= d^D\! x\,\sqrt{-|\hat{g}|},
 \end{align}
 with $|\hat{e}|$ %=\det{\left(\vih^{\hat{a}}_{\hat{\mu}}\right)}$ 
 the determinant of the $D$-dimensional vielbein and
@@ -124,7 +125,7 @@ Two features that should be highlighted. First, the universality of this four fe
 
 It is important to remark that, instead of the ambiguity of choice for theory with torsion, the minimal extension of CEF has been used. In this framework gauge fields does not couple to torsion at classical level. If one consider gauge fields on curved spacetimes, the field strength tensor appears as torsion-free term in the action, and there is no reason to change partial derivatives by torsionful covariant derivatives in the field strength tensor for gauge bosons, because the usual definition for the field strength of gauge fields is also valid for curved spacetimes. 
 
-A more natural way to understand this, relies on CEF, because one-form gauge field transform as a connection (in CEF formalism, gauge fields are also one-forms). By this reason active Lorentz transformation keeps invariant the one-form gauge fields, and no covariant derivative is needed (for a further reading, see Ref.~\cite{Benn:1980ea}). This condition keeps safe the gauge invariance of the theory Ref.~\cite[p.407]{Hehl:1976kj}. One could do explicit calculation with torsionful covariant derivative acting on one-form gauge field, and realize that the gauge violating terms vanishes.
+A more natural way to understand this, relies on CEF, because one-form gauge field transform as a connection. By this reason active Lorentz transformation keeps invariant the one-form gauge fields, and no covariant derivative is needed (for a further reading, see Ref.~\cite{Benn:1980ea}). This condition keeps safe the gauge invariance of the theory Ref.~\cite[p.407]{Hehl:1976kj}. One could do explicit calculation with torsionful covariant derivative acting on one-form gauge field, and realize that the gauge violating terms vanishes.
 
-Demanding a general gauge invariance for fermions, the covariant derivative from Eq.~\eqref{covder} will be shifted by gauge connection $\hat{A}_{\hat{\mu}}^a$ and interaction between fermions and gauge bosons will arise.
+Demanding a general gauge invariance for fermions, the covariant derivative from Eq.~\eqref{covder} will be shifted by gauge connection $\hat{V}_{\hat{\mu}}^A$ and interaction between fermions and gauge bosons will arise.
 
