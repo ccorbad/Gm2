@@ -1,5 +1,5 @@
-\section{Constraints from precision tests: $Z^0$ boson width decay}
-\label{sec:constraints}
+\section{\label{sec:constraints} Constraints from precision tests: $Z^0$ boson width decay}
+
 In this section, our aim is to compare the theoretical results obtained in the last section with values from precision tests. From these values, one could constraints the scale for new physics coming from extra dimensions scenarios. One of the most well known values, with excellent statistic and precision measurement is the $Z^0$ width decay. Considering the most general current $J^\mu(p,p')$ in Eq.~\eqref{current}, the width decay of $Z^0$ into electrons can be decomposed
 \begin{align}
 \Gamma_{\text{teo}}\left(Z^0\rightarrow e^+\,e^-\right) &= \Gamma_{\text{SM}} + \delta\Gamma_{\text{4FI}}
@@ -43,10 +43,63 @@ Restricting only to positive energy scales, $\Lambda_1^Z$ is excluded by the exp
 \begin{align}
  \Lambda_Z &\geq 53.9364\;[\text{TeV}].
 \end{align}
-\begin{figure}[H]
- \includegraphics[scale=.34]{excl.eps}
- \caption{Exclusion limits for $\Lambda$ using the SM precision tests of $Z^0$ boson width decay. Blue curve line denotes $\delta\Gamma_{\text{4FI}}$ coming from torsionful extra dimension theory and the red straight one denotes $\delta\Gamma_{\text{exp}}$ obtained in SM precision tests. Shaded region denotes the error range of experimental data and is the allowed region for the solutions.}
-\end{figure}
+%% \begin{figure}[H]
+%%  \includegraphics[scale=.34]{excl.eps}
+%%  \caption{Exclusion limits for $\Lambda$ using the SM precision tests of $Z^0$ boson width decay. Blue curve line denotes $\delta\Gamma_{\text{4FI}}$ coming from torsionful extra dimension theory and the red straight one denotes $\delta\Gamma_{\text{exp}}$ obtained in SM precision tests. Shaded region denotes the error range of experimental data and is the allowed region for the solutions.}
+%% \end{figure}
+
+\begin{tikzpicture}
+  \begin{axis}[
+      title = Variation of $Z$ Width Decay,
+      axis background/.style={
+        shade,top color=gray!50,bottom color=white},
+      xlabel = {Cut-off $\Lambda$},
+      ylabel = {$\delta\Gamma_Z$},
+      use units,
+      x unit = {GeV}, y unit = {MeV},
+      xmode = log,
+    ]
+    \addplot[ultra thick,
+      red,
+      samples = 301,
+      domain=91.19:2e6,
+    ] { 4.388e-9 };
+    \addplot[ultra thick,
+      blue,
+      samples = 301,
+      domain=91.19:2e6,
+    ] { ln(x^2/(91.1876)^2)/x^2 };
+    \coordinate (pt) at (axis cs: 2e5,1e-6);
+  \end{axis}
+  
+  \node[pin=90:{
+      \begin{tikzpicture}[baseline,trim axis left,trim axis right]
+        \begin{axis}[
+            axis background/.style={fill=white},
+            footnotesize,
+            grid = both,
+            grid style = {black!20,dashed},
+            xmode  = log,% ymode = log,
+            xmin = 2e4, xmax = 2e6,
+            ymin = 1e-11, ymax = 7e-9,
+          ]
+          
+          \addplot[very thick,
+            red,
+            fill = red,
+            fill opacity = .2,
+            domain=20000:2100000,
+            samples=301,
+          ] { 4.388e-9 } |- (axis cs:20000,-1e-9);
+          \addplot[very thick,
+            blue,
+            domain=20000:2100000,
+            samples=301,
+          ] { ln(x^2/(91.1876)^2)/x^2 };
+        \end{axis}
+      \end{tikzpicture}%
+  }] at (pt) {};
+\end{tikzpicture}
 
 This limits are consistents with Ref.~\cite{Chang:2000yw} but are more stronger than $\Lambda \geq 28\,[\text{TeV}]$ found in the context of Universal Extra Dimensions (UED) studied in the referred work.
 
