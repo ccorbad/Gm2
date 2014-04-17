@@ -1,0 +1,602 @@
+\documentclass[twocolumn,showpacs,showkeys,prd,superscriptaddress]{revtex4-1}
+
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{siunitx}
+\usepackage{ragged2e}
+
+%%%%%%%%% CORRECTIONS %%%%%%%%%
+\usepackage{ulem}
+\newcommand\pro[1]{{\color{blue}#1}}
+\newcommand\out[1]{{\color{red}\sout{#1}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{definitions}
+\input{tikzdefinitions}
+
+
+\begin{document}
+%\title{Torsional Contribution to One-Loop Observables in an Effective Theory Coming From Extra Dimensions}
+\title{Torsion in Extra Dimensions and One-Loop Observables}
+
+\author{Oscar \surname{Castillo-Felisola}}
+\email{o.castillo.felisola@gmail.com} 
+\affiliation{Departamento de F\'\i sica, Universidad T\'ecnica Federico Santa Mar\'\i a, Casilla 110-V, Valpara\'\i so, Chile.}
+\affiliation{Centro Cient\'ifico Tecnol\'ogico de Valpara\'iso, Chile.}
+
+\author{Crist\'obal \surname{Corral}}
+\email{cristobal.corral@postgrado.usm.cl}
+\affiliation{Departamento de F\'\i sica, Universidad T\'ecnica Federico Santa Mar\'\i a, Casilla 110-V, Valpara\'\i so, Chile.}
+
+\author{Sergey \surname{Kovalenko}}
+\email{sergey.kovalenko@usm.cl}  
+\affiliation{Departamento de F\'\i sica, Universidad T\'ecnica Federico Santa Mar\'\i a, Casilla 110-V, Valpara\'\i so, Chile.}
+\affiliation{Centro Cient\'ifico Tecnol\'ogico de Valpara\'iso, Chile.}
+
+\author{Iv\'an \surname{Schmidt}}
+\email{ivan.schmidt@usm.cl}  
+\affiliation{Departamento de F\'\i sica, Universidad T\'ecnica Federico Santa Mar\'\i a, Casilla 110-V, Valpara\'\i so, Chile.}
+\affiliation{Centro Cient\'ifico Tecnol\'ogico de Valpara\'iso, Chile.}
+
+\begin{abstract}
+  We study gravity with torsion in extra dimensions and derive an effective 4-dimensional theory containing four-fermion contact operators at the fundamental scale of quantum gravity in the TeV range. These operators may have an impact on the low-energy observables and can manifest themselves or can be constrained  in precision measurements.  We calculate possible contributions of these operators to some observables at one-loop level. We show that the existing precision data on the lepton decay mode of Z-boson set a stringent limit on the fundamental scale of the gravity to be as high as  $\Lambda\geq \SI{35}{\TeV}$ at 95\% C.L.
+\end{abstract}
+
+\maketitle
+
+
+\section{Introduction}
+
+By now the Standard Model (SM) of particle physics has proved to be a very successful and predictive framework. Recently ATLAS and CMS experiments discovered a new particle with the approximate mass of \SI{125.6}{\GeV}, that is consistent with the longly awaited last missing element of the SM, the Higgs boson~\cite{Aad:2012tfa,Chatrchyan:2012ufa}.
+This anticipated triumph will leave, however, many open questions of fundamental kind which do not allow qualifying the SM to be a true fundamental theory but a low energy effective framework. Particularly fundamental of the open questions are a huge hierarchy between the electroweak and gravitational scales as well as the lack of compatibility with the gravity.  There exists in the literature a number/variety of  proposals for the solution of the Hierarchy Problem.  Two of the  most popular of them appealing to the supersymmetry and extra dimensions  are intimately related to the gravity.
+
+There have been many efforts undertaken in the past towards deeper understanding of gravity from different perspectives. As is known the conventional Einstein-Hilbert Theory (EHT)  of gravity can be interpreted as a gauge theory of the Lorentz group~\cite{PhysRev.101.1597}.
+On the other hand  classification of particles with definite mass and spin is given in  the flat Minkowski space-time  in terms of irreducible representations of the Poincar\'e group. Nonetheless, attempts to  construct a gauge theory for the Poincare group in four dimensions have fail~\cite{Kibble:1961ba,PhysRevLett.33.445,PhysRevD.13.3192,PhysRevLett.38.739}.
+
+
+The EHT might be viewed according to the first order formalism, where the affine connection and the metric are independent variables.  In  cases where the connection  have a non-vanishing antisymmetric part (called \textit{torsion}), this theory is known as the Einstein-Cartan Theory (ECT) of gravity. In the pure gravity case, presence of the torsion does not affect the well known predictions of the EHT. However, coupling fermionic matter to ECT, gives rise to new interactions of the four-fermion type  (see Ref.~\cite{Kibble:1961ba}) absent in the Einstein-Hilbert theory, due to the spin-torsion interaction. Therefore, cosmological or experimental manifestations of these interactions would allow discriminating between these two theories.
+
+However in the four-dimensional space-time,  the gravity effects in particle interactions at low energies are highly suppressed by the inverse squared of the  Planck mass ($M_{\text{Pl}}\sim\SI{e19}{\GeV}$) making them experimentally unobservable. 
+
+On the other hand the key point of the extra dimensional scenarios  \cite{Randall:1999ee,ArkaniHamed:1998rs} for the solution of the Hierarchy Problem is reduction of the fundamental gravity scale down to the \si{\TeV} range.  This implies that the gravity induced  interactions, in particular, those which originates from the torsion become phenomenologically valuable.
+
+
+The possibility of observation of the torsion-induced interactions has been addressed in the literature~\cite{Belyaev:1998ax,CastilloFelisola:2012fy,Lebedev:2002dp,Kostelecky:2007kx}.
+
+
+In the present paper we study some phenomenological implications of the torsion induced four-fermion interactions (TFFI) in extra dimensions.
+We explore one-loop observables within an effective four dimensional theory derived from the extra dimensional one. We focus on the TFFI contribution to the  $Z$-boson interaction with fermions. Using the existing data on precision tests of the SM~\cite{Altarelli:2004fq,Beringer:1900zz} we extract a stringent limit on the fundamental scale of the gravity. 
+
+The article is organized as follow: In Sec.~\ref{sec:CEF}  we briefly summarize the Cartan-Einstein Formalism. In Sec.~\ref{sec:extradim}  we present an extra dimensional scenario with torsional gravity and derive the corresponding effective four-dimensional theory. Sec.~\ref{sec:oneloop} deals with the calculation of the one-loop $Z$ form factors of the fermions. In Sec.~\ref{sec:constraints} data on precision tests of the SM are used to constraint the parameters of the extra dimensional theory. We conclude with Sec.~\ref{sec:conclusions} summarizing and discussing our results as well as some uncovered aspects of TFFI phenomenology.
+
+
+\section{\label{sec:CEF} Einstein-Cartan Theory. Formalism.}
+
+
+In this section we give a brief summary of the formalism used in the Einstein-Cartan Theory of gravity. %The ECT is constructed on more general grounds than the Einstein-Hilbert one.
+Within the framework of first order formalism, spin connection and vielbeins are independent fields, and  torsion might not vanish. Including torsion implies the existence of an antisymmetric part of the affine connection
+\begin{align}
+  \hat{T}_{\hat{\mu}}{}^{\hat{\lambda}}{}_{\hat{\nu}} \equiv 2\hat{\Gamma}_{[\hat{\mu}}{}^{\hat{\lambda}}{}_{\hat{\nu}]} = \hat{\Gamma}_{\hat{\mu}}{}^{\hat{\lambda}}{}_{\hat{\nu}} - \hat{\Gamma}_{\hat{\nu}}{}^{\hat{\lambda}}{}_{\hat{\mu}},
+\end{align}
+where hatted  indices denote coordinates on a $D$-dimensional  spacetime, $\Ma$, endowed with a metric $\hat{g}_{\hat{\mu}\hat{\nu}}(x)$,  related with the vielbeins, $\vih^{\hat{a}}_{\hat{\mu}}(x)$, via
+\begin{equation}
+  \label{metricrelation}
+  \hat{g}_{\hat{\mu}\hat{\nu}}(x) = {\eta}_{\hat{a}\hat{b}}\,\vih^{\hat{a}}_{\hat{\mu}}(x)\,\vih^{\hat{b}}_{\hat{\nu}}(x),
+\end{equation}
+and $\etah{a}{b} = \diag{\left(-,+,\ldots,+\right)}$ is the $D$-dimensional Minkowski metric on the tangent space, $T_x\Ma$.
+
+In  differential forms,  torsion and curvature are defined in terms of the vielbeins and spin connection through the Cartan structure equations,
+\begin{align}
+  \label{cartantorsion}
+  \df\vifhn{a}{} + \wfh^{\hat{a}}{}_{\hat{c}}\wedge\vifhn{c}{} &= \Tfhn{a}{} \equiv \frac{1}{2!}\hat{\T}_{\hat{\mu}}{}^{\hat{a}}{}_{\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}}, \\
+  \label{cartancurvature}
+  \df\wfh^{\hat{a}\hat{b}} + \wfh^{\hat{a}}{}_{\hat{c}}\wedge\wfh^{\hat{c}\hat{b}} &= \Rfhn{a}{}{b}{} \equiv \frac{1}{2!}\Rh^{\hat{a}\hat{b}}{}_{\hat{\mu}\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}},
+\end{align}
+where $\vifhn{a}{}$ and $\wfh^{\hat{a}}{}_{\hat{c}}$ are the vielbein and spin connection 1-forms, while $\Tfhn{a}{}$ and $\Rfhn{a}{}{b}{}$ are the  torsion and curvature 2-forms. Therefore, the latter serves to write down the ECT of gravity.
+
+The fermionic matter is introduced via the minimal coupling procedure, by  defining the covariant derivative for fermions
+\begin{equation}
+  \label{covder}
+  D_{\hat{a}}\Psi = \hat{E}_{\hat{a}}^{\hat{\mu}}D_{\hat{\mu}}\Psi = \hat{E}_{\hat{a}}^{\hat{\mu}}\left(\partial_{\hat{\mu}}\Psi + \frac{1}{4}(\hat{\omega}_{\hat{\mu}}){}^{\hat{b}\hat{c}}\gamma_{\hat{b}\hat{c}}\Psi\right),
+\end{equation}
+that keeps invariant the Dirac action under local Lorentz transformation. Above, we used the inverse vielbein, $\hat{E}^\mu_a = \left(\hat{e}^a_\mu\right)^{-1}$, and in general $\gamma_{a_1 \cdots a_n} = \gamma_{[a_1}\cdots\gamma_{a_n]}$.
+%% The spin connection can be usefully decomposed into 
+%% \begin{align}
+%%   \hat{\omega}_{\hat{\mu}}{}^{\hat{a}\hat{b}} = \hat{\free{\omega}}_{\hat{\mu}}{}^{\hat{a}\hat{b}} + \hat{\K}_{\hat{\mu}}{}^{\hat{a}\hat{b}}
+%% \end{align}
+%% where $\hat{\free{\omega}}_{\hat{\mu}}{}^{\hat{a}\hat{b}}$ is the torsion-free spin-connection, intimately related with the Levi-Civita connection and  
+%% \begin{equation}
+%%   \label{generalcontorsion}
+%%   \hat{\K}_{\hat{\mu}}{}^{\hat{b}}{}_{\hat{c}} = \frac{1}{2}\left(\hat{\T}_{\hat{\mu}}{}^{\hat{b}}{}_{\hat{c}} - \hat{\T}_{\hat{\mu}\hat{c}}{}^{\hat{b}} + \hat{\T}^{\hat{b}}{}_{\hat{\mu}\hat{c}}\right).
+%% \end{equation}
+%% is the contorsion tensor which encondes the torsion information in the spin-connection. Hereon, circled quantities are torsion-free and boldface symbols denote differential forms. The two most important equations in this formalism, that relate the vielbeins and the spin connection with torsion and curvature respectively are the so called {\it{Cartan structure equations}} 
+%% \begin{align}
+%%   \label{cartantorsion}
+%%   \df\vifhn{a}{} + \wfh^{\hat{a}}{}_{\hat{c}}\wedge\vifhn{c}{} &= \Tfhn{a}{} \equiv \frac{1}{2!}\hat{\T}_{\hat{\mu}}{}^{\hat{a}}{}_{\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}}, \\
+%%   \label{cartancurvature}
+%%   \df\wfh^{\hat{a}\hat{b}} + \wfh^{\hat{a}}{}_{\hat{c}}\wedge\wfh^{\hat{c}\hat{b}} &= \Rfhn{a}{}{b}{} \equiv \frac{1}{2!}\Rh^{\hat{a}\hat{b}}{}_{\hat{\mu}\hat{\nu}}\,dx^{\hat{\mu}}\wedge dx^{\hat{\nu}},
+%% \end{align}
+%% where $\vifhn{a}{}$ is the $1$-form vielbein, $\Tfhn{a}{}$ and $\Rfhn{a}{}{b}{}$ are the $2$-forms torsion and curvature respectively.
+
+%% \subsection{Action and equations of motion}
+%% %The following action will be considered
+
+In the context of the ECT, we are considering the following action (bold symbols represent differential forms)
+\begin{align}
+  \nonumber
+  S &= \frac{1}{2\kappa_*^2}\int\frac{\epsilon_{\hat{a}_1\ldots\hat{a}_D}}{(D-2)!}\,\Rfh^{\hat{a}_1\hat{a}_2}\wedge\vifh^{\hat{a}_3}\wedge\ldots\wedge\vifh^{\hat{a}_D} \\
+  \nonumber
+  &\quad- \sum_{r}\int\bigg(\frac{1}{2}\left(\bar{\Psi}_r\gf\wedge\star\Df\Psi_r - \Df\bar{\Psi}_r\wedge\star\gf\Psi_r\right) \\
+  \label{formaction}
+  &\qquad + m_r \bar{\Psi}_r\Psi_r\,\frac{\epsilon_{\hat{a}_1\ldots\hat{a}_D}}{D!}\vifh^{\hat{a}_1}\wedge\ldots\wedge\vifh^{\hat{a}_D}\bigg)
+\end{align}
+where $\kappa_*^2 = 8\pi G_* = M_*^{-(2+n)}$, with $G_*$ and $M_*$  the analog of the Newtonian gravity constant and the reduced Planck mass in $D$ dimensions. In the fermionic sector, $\bar{\Psi}\equiv\imath\Psi^\dagger\gamma^0$ is the Dirac adjoint,  $r$ index indicates flavor, \mbox{$\gf=\gamma_{\hat{a}}{\bf{e}}^{\hat{a}}$} is the gamma matrix 1-form, and the symbol $\hodge$ denotes Hodge duality.
+
+The equations of motion are found from the principle of least action, and yield
+\begin{align}
+  \label{einsteineom}
+  \Rh_{\hat{a}\hat{b}} - \frac{1}{2}\etah{a}{b}\Rh &= \kappa_*^2\,\hat{T}_{\hat{a}\hat{b}} \\
+  \label{contorsionfound}
+  \Th_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} = 2\,\hat{\K}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} &= -\, \frac{\kappa_*^2}{2}\sum_{r}\bar{\Psi}_r\gamma_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}}\Psi_r.
+\end{align}
+%\end{equation}
+where $\hat{T}_{\hat{a}\hat{b}}$ is the energy-momentum tensor of fermions, and $\hat{\K}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}}$ is the contorsion tensor. From Eq.~\eqref{cartantorsion}, the spin connection can be split into a torsion-free part plus the contorsion,
+\begin{align}
+  \hat{\omega}_{\hat{\mu}}{}^{\hat{a}\hat{b}} &= \hat{\free{\omega}}_{\hat{\mu}}{}^{\hat{a}\hat{b}} + \hat{\K}_{\hat{\mu}}{}^{\hat{a}\hat{b}}\\
+  \intertext{and additionally}
+  \Tfhn{a}{} &= {\hat{{\boldsymbol{\mathcal{K}}}}^{\hat{a}}{}_{\hat{b}}}\wedge \hat{{\bf{e}}}^{\hat{b}}  .
+\end{align}
+%% For the fermionic action (\ref{formaction})
+%% %the energy-momentum tensor is
+%% it takes the form
+%% \begin{align}
+%%   \hat{T}_{\hat{a}\hat{b}} &= \sum_{r}\frac{1}{2}\left(\bar{\Psi}_r\gamma_{\hat{a}}D_{\hat{b}}\Psi_r - D_{\hat{b}}\bar{\Psi}_r\,\gamma_{\hat{a}}\Psi_r\right) + \etah{a}{b}\Lag_{\Psi}
+%% \end{align}
+%% with $\Lag_\Psi$ being the Dirac Lagrangian derived from Eq.~\eqref{formaction}. The second equation of motion can be obtained varying with respect to the torsionful spin connection. Solving the algebraic equation one find a completely antisymmetric torsion tensor for this theory. Noting that contorsion tensor in Eq.~\eqref{generalcontorsion} is antisymmetric in its last two indices, the equation of motion for the spin connection reads
+%% \begin{align}
+%%   \label{contorsionfound}
+%%   \hat{\K}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} = \frac{1}{2}\,\Th_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} = -\, \frac{\kappa_*^2}{4}\sum_{r}\bar{\Psi}_r\gamma_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}}\Psi_r.
+%% \end{align}
+%% One could notice that gravity and fermions in CEF leads to a completely antisymmetric torsion tensor. 
+% Using Eq.~\eqref{generalcontorsion} the contorsion tensor is  found to be
+% \begin{align}
+%   \label{contorsionfound}
+%   \hat{\K}_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}} &= - \frac{\kappa_*^2}{4}\sum_{r}\bar{\Psi}_r\gamma_{\hat{a}}{}^{\hat{b}}{}_{\hat{c}}\Psi_r.
+% \end{align}
+
+%% \subsection{Torsional contribution to the fermionic action}
+
+%% Eq.~\eqref{contorsionfound} has no dynamics, therefore one can sustitute into the initial action as a constraint. There exists models where torsion appears as a dynamical field instead of the minimal consideration of this work (for further reading Ref.~\cite{Carroll:1994dq,Belyaev:1998ax}). Replacing Eq.~\eqref{contorsionfound} in gravity sector leads to
+The equation of motion for the spin connection (Eq.~\eqref{contorsionfound}) is algebraic, therefore it can be substituted into the initial action in order to eliminate the torsion, which acts in this model as an auxiliary field. Towards this end it is convenient to pinpoint the torsion in the terms of Eq.~(\ref{formaction}) by the following decompositions
+\begin{eqnarray}
+  \label{gravdecomp}
+  \Rfhn{a}{1}{a}{2} &=& \Rfhnfree{a}{1}{a}{2} + \free{\Df}\Kfhn{a}{1}{a}{2} + \Kfhnud{a}{1}{b}{}\wedge\Kfhn{b}{}{a}{2},\\
+  \label{F-decomp}
+  \Df\Psi_r \ \, &=& \free{\Df}\Psi_r + \frac{1}{4}\Kfhn{a}{}{b}{}\,\gamma_{\hat{a}\hat{b}}\Psi_r,
+\end{eqnarray}
+where as before the circled quantities are torsion-free. Then integrating out the torsion in Eq. \eqref{formaction} one finds the action
+\begin{align}\label{4FI}
+  S &= \free{S}_\text{grav} + \free{S}_\Psi + \frac{\kappa_* ^2}{32}\sum_{r,s}\int \dv[D]\,(\bar{\Psi}_r\gamma^{\hat{a}\hat{b}\hat{c}}\Psi_r)\,(\bar{\Psi}_s\gamma_{\hat{a}\hat{b}\hat{c}}\Psi_s)
+\end{align}
+with the contact four fermion interactions. Their presence is a peculiar prediction to the ECT. 
+%From Eq.~\eqref{4FI}, one  notice that this formulation of gravity leads to a four fermion interaction. 
+%
+%Several authors have studied possible gravitational effects of torsion and their phenomenology Ref.~\cite{Belyaev:1998ax,Fabbri:2010hz,Capozziello:%2012xt,Mavromatos:2012cc,CastilloFelisola:2012fy,Fabbri:2013gza,Kostelecky:2007kx}.
+%A more general formulation of gravity, where nonvanishing torsion tensor is considered, leads to a four fermionic interaction as one can notice in Eq.~\eqref{4FI}. Several authors also have studying possible gravitational effects of torsion and its possible phenomenology Ref.~\cite{Belyaev:1998ax,Fabbri:2010hz,Capozziello:2012xt,Mavromatos:2012cc,CastilloFelisola:2012fy,Fabbri:2013gza}.
+%
+The following two features of the torsion-induced four fermion interactions should be highlighted. First, they conserve lepton flavors
+% universality of this four fermion interaction 
+due to flavor blindness of gravity. Second, fermions in these interactions are flavor paired due to the fact that
+the torsion-fermion interactions arise from the kinetic term of  the Dirac action. 
+%Therefore, fermions in the new interaction are (flavour) paired.
+
+%ambiguity of theory with torsion..
+The next comment is also in order. In the torsional extensions of the gravity the measure is not unique.
+%It is important to remark that in the process of generalising the theory gravity to include torsion, there exists an ambiguity in the choice of the measure. 
+%:{SK} 
+We consider the minimal version of the ECT with the standard measure. Within this framework, gauge fields do not couple to the torsion at classical level. 
+%A natural way to understand this relies on ECF, 
+This is because the one-form gauge field are singlets of local Lorentz transformations and no covariant derivative is needed (for more details see Ref.~\cite{Benn:1980ea}). Gauge invariance of the theory in this case is also 
+guaranteed~\cite{Hehl:1976kj}. 
+%
+%However, through the manuscript, only the minimal extension of CEF has been considered, where no modification to the standard measure is admit. Within this %framework, gauge fields do not couple to torsion at classical level. 
+%A natural way to understand this relies on CEF, because one-form gauge field transform as a connection. By this reason active Lorentz transformation keeps invariant %the one-form gauge fields, and no covariant derivative is needed (for a further reading, see Ref.~\cite{Benn:1980ea}). This condition keeps safe the gauge invariance %of the theory, as explained in Ref.~\cite[p.407]{Hehl:1976kj}. 
+%
+Demanding gauge invariance for fermions, the covariant derivative from Eq.~\eqref{covder} will be shifted by gauge connections $\hat{V}_{\hat{\mu}}^A$, in order to keep the action invariant under such transformation and interaction between fermions and gauge bosons will arise.
+
+%\input{extradim}
+\section{\label{sec:extradim}Extra dimensions scenario}
+
+
+\subsection{Motivations}
+
+A distinctive feature of the ECT is the presence of the four fermion contact operators discussed in the previous section.  Their manifestation in particle interactions  
+could be a smoking gun of the space-time torsion. However as seen from Eq. \eqref{4FI} these operators are  suppressed  by the inverse of the squared Planck 
+mass leaving them experimentally unavailable.  However the situation may dramatically changes in extra dimensions where the fundamental Planck scale can be reduced down to the TeV range. The corresponding extra dimensional scenarios have been proposed for solution of the Hierarchy Problem. The most popular of them are the scenarios  with more than two compact extra dimensions, proposed by Arkani-Hamed, Dimopoulos and Dvali 
+~\cite{ArkaniHamed:1998rs,Antoniadis:1998ig,ArkaniHamed:1998nn}, and with only one but large extra dimension of Randall and Sundrum
+~\cite{Randall:1999ee,Randall:1999vf}. Generalization of these scenarios have been considered in 
+Ref.~\cite{DeWolfe:1999cp,Gremm:1999pj,MPS,CastilloFelisola:2004eg}.
+
+
+
+%
+%In the previous section, a four fermion interaction due torsion has been found. 
+% One  problem with this interaction is that if one consider a four-dimensional scenario, the coupling constant $\kappa^2$ is suppressed by the inverse of the squared %Planck mass. 
+%
+% One  problem with this interaction is that if one consider a four-dimensional scenario, the coupling constant $\kappa^2$ is suppressed by the inverse of the squared %Planck mass. 
+
+%There exist extra dimensions models where the four-dimensional Planck scale $M_{\text{Pl}}$ is an exponential enhancement of a fundamental gravity scale $M_*$ %defined on the whole manifold. Among these models one counts those known as %proposed by Arkani-Hamed, Dimopoulos and Dvali (
+%ADD models proposed  in Ref.~\cite{ArkaniHamed:1998rs,Antoniadis:1998ig,ArkaniHamed:1998nn}, %that consider $n\geq2$ compact extra dimensions 
+%and also the  Randall--Sundrum (RS) models proposed in Ref.~\cite{Randall:1999ee,Randall:1999vf} % that assumes $n=1$ large extra dimensions. 
+%with their generalizations  considered in Ref.~\cite{DeWolfe:1999cp,Gremm:1999pj,MPS,CastilloFelisola:2004eg}
+
+% In theories  with extra dimensions, one has to decompose the higher dimensional spinors, $\Psi$, into a four-dimensional  $\psi(x)$ and an extra dimensional $\chi(y)$ ones 
+% \begin{align}
+%   \label{spinordecomp}
+%   \Psi(x,y) &= N\,\sum_{i}\; \psi^{i}(x)\chi_{i}(y)
+% \end{align}
+% with  $x$ and $y$ being the four-dimensional and $n$ extra dimensional coordinates respectively. The factor $N$ is a normalization. 
+% In order to get an effective theory in four-dimensions, one has to perform dimensional reduction of the $n$ extra dimensions.
+%
+%where $\psi$ and $x$ represent the four-dimensional spinor and coordinate system respectively, while $\chi$ and $y$ denote  $n$-dimensional ones, and $N$ is a ^%}normalization factor. In order to get an effective theory in four-dimensions, one has to perform dimensional reduction of the $n$ extra dimensions.
+
+
+\subsection{The model}
+
+We consider the ECT in the five-dimensional space-time with the Randall-Sundrum metric~\cite{Randall:1999ee}
+\begin{align}
+  \label{RSmetric}
+  ds^2 = e^{-2k\abs{y}}\eta_{\mu\nu}dx^\mu\,dx^\nu + dy^2
+\end{align}
+%
+and the fifth dimension $y$ compactified on an orbifold, $S^1/\mathbb{Z}_2$ of a radius $R$ corresponding to the interval \mbox{$0\leq y\leq \pi R$}. 
+
+% We define the five-dimensional vielbein for this space
+% %from Eq.~\eqref{RSmetric} 
+% \begin{align}
+%   \vifhn{a}{} \equiv \left(\vifh^{a},\vifh^5\right) = \left(e^{-k|y|}\,dx^\mu,dy\right). 
+% \end{align}
+% %
+% Using
+% \begin{align}
+% |\hat{e}| = \det{\vih^{\hat{a}}_{\hat{\mu}}(x)} = e^{-4k|y|} 
+% \end{align}
+% we find the invariant volume element  %can be calculated using 
+% \begin{align}
+%    \dv[5]  = d^4x\, dy\;e^{-4k|y|}.
+% \end{align}
+% Note that the determinant of the vielbein depends only on the fifth dimension $y$ and can be integrated out in the subsequent dimensional reduction. 
+%has only dependence on the fifth dimension and can be integrated out when dimensional reduction is performed. 
+
+The Kaluza-Klein (KK) decomposition of 5-dimensional fermions into chiral 4-dimensional ones, taking into account only the zero KK modes for phenomenological reasons and using the profiles from Ref.~\cite{Gherghetta:2000qt} is
+\begin{align}
+  \Psi_r(x,y) &= \sqrt{\frac{k\left(1-2c_r\right)}{e^{(1-2c_r)\pi\,kR}-1}}\,e^{(2-c_r)ky}\bigg(\psi_+(x) + \psi_-(x)\bigg)
+\end{align}
+where we have chosen the same profile for left and right handed for simplicity. The $c_i$'s coefficients control the localization of fermions. % to Planck (UV) or TeV (IR) branes. If 
+For $c_i>\tfrac{1}{2}$ and $c_i<\tfrac{1}{2}$
+they are localized near the Planck and the TeV branes respectively,
+while for $c=\tfrac{1}{2}$ fermions lie in the bulk.
+%where $R$ denotes the typical radius of the extra dimension, and the initial term is introduce as a normalization factor. 
+% .The spread of $\Psi_r$  in extra dimension is encoded in the profile $f_{(i)\,r}(y)$. We denote $\psi_{(i)\,r}(x)$ as the fermion field KK-modes in four-dimensional space-time
+
+
+%On gauge boson, $A$ denotes Lie algebra index associated to the gauge symmetry. The extra dimension information of $\Psi_r$ and $\hat{V}_{\hat{\mu}}^A$ are %enconded by $h_{(i)}(y)$ and $f_{(i)\,r}(y)$ profiles. The terms $\psi_{(i)\,r}(x)$ and $V_{(i)\,\hat{\mu}}^{A}(x)$ denotes fermion of $r$ flavor and gauge fields on four-%dimensional spacetime, expanded on KK modes. 
+
+%In the previous KK decomposition for gauge fields, $\hat{V}_y^A=0$ has been used. This gauge choice eliminates $\hat{V}_y^A$ from the 3-brane but the gauge %invariance of the effective action in four dimensions still remains (see Ref.~\cite{Davoudiasl:1999tf}). 
+
+% In the following analysis we take into account only zero mode of KK fermionic excitations $f_{(0)\,r}(y)$. %This approach gives only the lower mass of KK tower and allows to search in the threshold of finding extra dimensions, because the upper modes with higher %masses will be less accessible. 
+% Using the results of
+% %the zero mode of KK excitations obtained in 
+% Ref.~\cite{Gherghetta:2000qt,Gherghetta:2006ha}  for the zero modes and the notation $\psi_r(x) \equiv  \psi_{(0)\,r}(x)$, the  spinor fields can be written as
+% %
+%In the following analysis, only the zero mode of KK gauge and fermionic excitations $h_{(0)}(y)\equiv h(y)$ and $f_{(0)\,r}(y)\equiv f_r(y)$ respectively, will be %consider. This approach gives only the lower mass of KK tower and allows to search in the threshold of finding extra dimensions, because the upper modes with %higher masses will be less accessible. Using the zero mode of KK excitations obtained in Ref.~\cite{Gherghetta:2000qt,Gherghetta:2006ha} and the notation %$V_{(0)\,\mu}^{A}(x)\equiv V_{\mu}^{A}(x)$ and $\psi_{(0)\,r}(x)\equiv\psi_r(x)$, the gauge and spinor fields can respectively be written
+
+
+The Clifford algebra in five dimensions can be constructed using the four-dimensional one. % plus the chiral gamma matrix defined by $\gamma^* = i\,\gamma^0\gamma^1\gamma^2\gamma^3$. Using tangent space coordinates, g
+The gamma matrices in five-dimensional space-time are
+\begin{align}
+  \ghu{a} = \left(\gamma^a,\gamma^*\right).
+\end{align}
+With this definition the product of gamma matrices in Eq.~\eqref{4FI} is 
+\begin{align}
+  (\ghhhu{a}{b}{c})(\ghhhd{a}{b}{c}) &= 6\left(\gamma_a\gamma^*\right)\left(\gamma^a\gamma^*\right) + 3\left(\gamma^{ab}\gamma^*\right)\left(\gamma_{ab}\gamma^*\right)
+\end{align}
+
+% Considering only neutral currents in the bulk 
+% as in Ref.~\cite{Davoudiasl:1999tf} 
+% we find for the gauge-fermion interactions
+% %If one consider only neutral current in the bulk as in Ref.~\cite{Davoudiasl:1999tf}, the interaction reads
+% % 
+% \begin{align}
+% \label{gauge5D}
+%   S_{\text{int}} &= -i\sum_{r}\,g_5\int \dv[5]\,\bar{\Psi}_r \gamma^{\mu}T^A\Psi_r\hat{V}_\mu^A,
+% \end{align}
+% where $g_5$ is the gauge coupling of the five-dimensional theory and $T^A$ are the gauge symmetry generators. In Eq.~\eqref{gauge5D} the identity
+% \begin{align}
+% \vih^{\hat{a}}_{\hat{\mu}}\;\hat{E}_{\hat{a}}^{\hat{\nu}} = \delta_{\hat{\mu}}^{\hat{\nu}}
+% \end{align}
+% has been used. 
+% Taking into account only zero KK mode contributions we approximately write down
+% %Considering only the contribution due zero KK modes this interaction reads 
+% \begin{eqnarray}
+% \label{GF-4dim}
+%   S_{\text{int}} \approx -i \sum_{r}\,g_{\text{eff}}\,\int d^4x\,\bar{\psi}_r\gamma^\mu T^A\psi_r V_\mu^A
+% \end{eqnarray}
+% where the effective coupling is 
+% \begin{align}
+%   g_{\text{eff}} \equiv \frac{g_5}{k(3+2c_r)}\,\frac{1-e^{-(3+2c_r)\pi kR}}{N_r^2(2\pi R)^{3/2}}.
+% \end{align}
+% It absorbs all the extra dimensional parameters of the gauge-fermion sector.
+% %contains all the information about the gauge coupling in the bulk.
+
+Using the chirality condition $\gamma^*\psi_{r\pm} = \pm\psi_{r\pm}$, the torsion induced four fermion interactions in Eq.~\eqref{4FI}, can be written in the zero mode approximation as (see Ref.~\cite{Castillo-Felisola:2013jva})
+\begin{widetext}
+  \begin{align}
+    \nonumber
+    S_{4\text{FI}} &\approx \sum_{r,s}\,\frac{\kappa_{\text{eff}}^2}{32}\,\int d^4x\bigg\{6\bigg[\left(\bar{\psi}_{r+}\gamma^\mu\psi_{r+}\right)\left(\bar{\psi}_{s+}\gamma_\mu\psi_{s+}\right) + \left(\bar{\psi}_{r-}\gamma^\mu\psi_{r-}\right)\left(\bar{\psi}_{s-}\gamma_\mu\psi_{s-}\right) - \left(\bar{\psi}_{r+}\gamma^\mu\psi_{r+}\right)\left(\bar{\psi}_{s-}\gamma_\mu\psi_{s-}\right) \\ 
+      \label{4FI5D}
+      &\qquad - \left(\bar{\psi}_{r-}\gamma^\mu\psi_{r-}\right)\left(\bar{\psi}_{s+}\gamma_\mu\psi_{s+}\right)\bigg] +  3\bigg[\left(\bar{\psi}_{r+}\gamma^{\mu\nu}\psi_{r-}\right)\left(\bar{\psi}_{s+}\gamma_{\mu\nu}\psi_{s-}\right) + \left(\bar{\psi}_{r-}\gamma^{\mu\nu}\psi_{r+}\right)\left(\bar{\psi}_{s-}\gamma_{\mu\nu}\psi_{s+}\right)\bigg]\bigg\}
+  \end{align}
+\end{widetext}
+where, 
+%$\kappa_{\text{eff}}^2$ has been defined in terms of the zero modes of KK excitations giving
+%where $\kappa_{\text{eff}}^2$ has been defined in terms of the zero modes of KK excitations giving
+\begin{align}
+  \label{kapparel}
+  k_{\text{eff}}^2 \equiv \frac{(2c_r -1)(2c_s - 1)\left(e^{-2\pi\,kR\left(c_r + c_s -1\right)} - 1\right)\,\kappa_*^2\,k}{(4 - 2c_r - 2c_s)\left(e^{\pi\,kR\left(1 - 2c_r\right)}-1\right)\left(e^{\pi\,kR\left(1 - 2c_s\right)}-1\right)}
+\end{align}
+
+Note that the axial-tensor term in Eq.~\eqref{4FI5D} arises only in the case of a single extra dimension. But even in this case for phenomenological reasons it 
+must be discarded.  This is required by the presence of chiral fermions in the four dimensional effective theory leading, as demonstrated in Ref.~\cite{Flachi:2001bj}, 
+to the orbifold boundary condition $\pm\gamma^*f_r(y)=f_r(-y)$.  Then before the dimensional reduction the term $\bar{\Psi}_r\gamma^{\mu\nu}\gamma^*\Psi_r$ is odd under $y\rightarrow-y$ and, therefore, must vanish identically ~\cite{Lebedev:2002dp}. Thus we are left with only axial-vector torsion-induced interaction in Eq. \eqref{4FI5D}.
+
+
+
+%If one wants chiral fermions in the effective theory in $4$-dimensions the orbifold boundary condition $\pm\gamma^*f_r(y)=f_r(-y)$ must be satisfied, as Ref.~%
+%\cite{Flachi:2001bj} shown. Analysing the last term on Eq.~\eqref{4FI5D} one can verify that, before the dimensional reduction, the term $\bar{\Psi}_r\gamma^{\mu
+%\nu}\gamma^*\Psi_r$ is odd under $y\rightarrow-y$. This leads to a trivial contribution of axial-tensor current interaction and torsion four fermion interaction is %decomposed into purely axial-vector one (see Ref.~\cite{Lebedev:2002dp}).
+
+Using the definitions $\kappa_{\text{eff}}^2 \equiv M_{\text{Pl}}^{-2}$ and $\kappa_*^2 \equiv M_*^{-3}$ and the stabilization value $kR\sim10$ from Ref.~\cite{Goldberger:1999uk}, we obtain for different values of $c_i$'s
+%differents values $c_i$
+%One can consider the stabilization value $kR\sim10$ from Ref.~\cite{Goldberger:1999uk} and differents values $c_i$
+\begin{align}
+  M_{\text{Pl}}^2 &\approx \left\{ \begin{matrix}
+    0.5\times10^{-26}\;k^{-1}\,M_*^3 & \text{if} & c_r\simeq c_s\simeq 0 \\
+    1\times10^{-24}\;k^{-1}\,M_*^3 & \text{if} & c_r\simeq c_s\simeq 1/2 \\
+    1\times10^{-2}\;k^{-1}\,M_*^3 & \text{if} & c_r\simeq c_s\simeq 1 
+  \end{matrix} \right.
+\end{align}
+
+% In the low-energy four dimensional effective theory the gauge fields $V^{A}_{\mu}$ in Eq. \eqref{GF-4dim} are photon and $Z$-boson with the couplings 
+% $g_{\text{eff}} = e\,Q_f$  and $g_{\text{eff}} = e/(2c_Ws_W)\left(T^3_f - 2\,s_W^2\,Q_f\right)$ respectively. Here $Q_f$ and  $T_f^3$ are the electric charge and the third component of the weak isospin. We also denoted  $s_W(c_W) = \sin(\cos)\theta_W$. 
+
+
+%In order to analyse only the fundamental scale of extra dimensions, the effective coupling of neutral gauge bosons coupled to fermionic current, will be considered %equal as the SM in $4D$, that is, $g_{\text{eff}} = e\,Q_f$ for photon exchange and $g_{\text{eff}} = e/(2c_Ws_W)\left(T^3_f - 2\,s_W^2\,Q_f\right)$ for $Z^0$ %exchange, where $Q_f$ is electric charge in proton unities, $T_f^3$ is the third component of weak isospin and $s_W(c_W) = \sin(\cos)\theta_W$. 
+
+
+%\input{oneloop}
+
+\section{\label{sec:oneloop}One loop calculations and form factors}
+
+
+In this section, the effects of curvature in the effective theory in $4$-dimensions will be ignored, by the fact that the Universe is essentially flat as Ref.~\cite{Larson:2010gs} indicates. This assumption is also based in our comparision of torsion effects with particle accelerators data. Note that flat geometry doesn't mean that torsionful 2-form curvature vanishes because, from Eq.~\eqref{gravdecomp} follows 
+\begin{align}
+  \Rf{a}{b} &\xrightarrow[]{g_{\mu\nu}\rightarrow\eta_{\mu\nu}} \df\Kfuu{a}{b} + \Kfud{a}{c}\,\Kfuu{c}{b} 
+\end{align}
+This consideration has been used before in Ref.~\cite{Carroll:1994dq,Belyaev:1998ax,Kostelecky:2007kx}. In CEF the metric and connection are independent, this condition allows to curvature and torsion be independent too. There exist manifolds with torsion and no curvature (Weitzenb\"ock manifolds), where teleparallel gravity relies (for further reading, see Ref.~\cite{Arcos:2005ec}). 
+
+Our interest by now, is to extract information of the contribution of torsion to one loop form factors. Now, considering that $SU(2)_L\otimes U(1)_Y$ gauge sector of the SM is torsion free, the only effect of torsion is through the four fermion contact term in Eq.~\eqref{4FI5D}. Using this kind of interaction, our aim is to do one loop calculation in this theory. 
+
+The process to be calculated in this section can be extracted from the general four femionic interaction Lagrangian used in Ref.~\cite{GonzalezGarcia:1998ay} plus one neutral gauge boson exchange. The relevant Lagrangian used by Gonzalez-Garc\'ia, Gusso and Novaes in the previous reference is
+\begin{align}
+  \nonumber
+  \Lag_{\text{V}} &= \eta_V\,\frac{g^2}{\Lambda^2}\left[\psi_r\gamma_\mu\left(V_V - A_V\gamma^*\right)\psi_r\right] \\ 
+  \label{lagvec}
+  &\espacio\espacio\espacio\times \left[\psi_s\gamma^\mu\left(V_V - A_V\gamma^*\right)\psi_s\right],
+\end{align}
+where $r$ and $s$ denotes flavor indices as in the previous sections. The most general one loop calculation in this theory, can be build with the previous four fermion interaction Lagrangian and gauge boson coupled to fermions
+\begin{align}
+  \label{feyndiagram}
+  \begin{tikzpicture}[thick,baseline=(current  bounding  box.center)]
+    \coordinate (V) at (0,0);
+    \node[circle,draw=black,shade,minimum size=.6cm]  at (V)  {};
+    \draw[boson] (-2,0) node[anchor=south] {$V_\mu(k)$} -- (180:3mm);
+    \draw[directed] (1,-1) node[anchor=west] {$f(p)$}  -- (-45:3mm);
+    \draw[directed] (45:3mm) -- (1,1) node[anchor=west] {$f(p')$};
+  \end{tikzpicture}
+  =\imath e \, V_\mu(k) J^\mu(p,p')
+\end{align}
+%% \begin{figure}[H]
+%% \scalebox{1.5}[1.5]{\begin{tikzpicture}
+%%  \draw[boson,thick] (-5,0) -- (-3.3,0);
+%%  \node[above,scale=.7] at (-4,.2) {$Z^0_\mu(k),A_\mu(k)$};
+%%  \draw[thick,directed] (-2,-1) -- (-3,0);
+%%  \node[right,scale=.7] at (-2.3,-.5) {$f(p)$};
+%%  \draw[thick,directed] (-3,0) -- (-2,1);
+%%  \node[right,scale=.7] at (-2.3,.5) {$f(p')$};
+%%  \filldraw[shade] (-3,0) circle (.3);
+%%  \node[scale=.6] at (-2,0) {$=$};
+%%  \node[scale=.6] at (-.8,0) {$(i\,e)V_\mu(k) J^\mu(p,p')$};
+%% \end{tikzpicture}}
+%% \caption{Feynman diagram for one loop process including gauge coupling, four fermion interaction due torsion and general neutral current $J^\mu(p,p')$.}
+%% \end{figure}
+where $V_\mu(k) = \{A_\mu(k),Z^0_\mu(k)\}$ are the neutral gauge bosons to be considered and
+\begin{widetext}
+  \begin{align}
+    \label{current}
+    J^\mu(p,p') &\equiv \bar{u}(p')\Bigg[\gamma^\mu\,F_V(k^2) +F_A(k^2)\gamma^\mu\gamma^* + i\frac{\sigma^{\mu\nu}\,k_\nu}{2\,m_f}F_M(k^2) + F_D(k^2)\frac{1}{2m_f}\sigma^{\mu\nu}\gamma^* k_\nu\Bigg]v(p)
+  \end{align}
+\end{widetext}
+is the more general neutral current constructed from Eq.~\eqref{lagvec}. $F_i(k)$, where $i=V,A,M,D$, denotes vector, axial, magnetic and dipole form factor respectively that plays an important role in precise measurments of radiative correction. %In order to analyse the low energy regime of electro weak precision measuments, the following conditions must be satisfied. If one consider photon coupled to $J^\mu(p,p')$ in Eq.~\eqref{current}
+%   \begin{align}
+%   F_V^\gamma(0) &= Q_f,  \\
+%   F_A^\gamma(0) &= 0, \\
+%   F_M^\gamma(0) &= a_f^\gamma \equiv \frac{1}{2}\left(g_f-2\right),\\
+%   F_D^\gamma(0) &= d_f^e\,\frac{2\,m_f}{e},
+%   \end{align}
+%  must be met, where $Q_f$, $a_f^\gamma$ and $d_f^e$ denotes unities of proton electric charge, the anomalous magnetic moment and electric dipole moment of the fermion $f$ respectively. 
+%  
+% Considering $Z^0$ coupled to $J^\mu(p,p')$ in Eq.~\eqref{current}
+% \begin{align}
+% \label{vecformfacz}
+% F_V^Z(M_Z^2) &= \frac{1}{2\,s_W\,c_W}\left(T_3^f - 2\,Q_f\,s_W^2\right), \\
+% \label{axiformfacz}
+% F_A^Z(M_Z^2) &=  \frac{1}{2\,s_W\,c_W}T_3^f, \\
+% F_M^Z(M_Z^2) &= a_f^Z, \\
+% F_D^Z(M_Z^2) &= d_f^w\,\frac{2\,m_f}{e}, 
+% \end{align}
+% must be met, where $s_W(c_W) = \sin(\cos)\theta_W$ and $T_3^f$, $a_f^Z$ and $d_f^w$ denotes the third component of weak isospin, fermion weak magnetic moment and weak dipole moment of the fermion $f$ respectively. 
+We decompose form factors in their tree level value plus a contribution due radiative correction at one loop $F_i^B(k^2) = F_i^{B\,\text{tree}} + \delta F_i^B(k^2)$, where $i=V,A,M,D$ and $B = \gamma,Z^0$. Calculating this radiative corrections form factors $\delta F_i^B(k^2)$ is straighforward using the results obtained in Ref.~\cite{GonzalezGarcia:1998ay}. In the present work, $s$ and $t$-channels has been used with electrons in the final state and considering all possible particles running into the loop. By considering quarks into the loop, a factor $3$ has to be taken into account due their color. The normalization $g^2/4\pi = 1$ has been used. If $J^\mu(p,p')$ in Eq.~\eqref{current} is coupled to a photon field, the only non-vanishing form factor is $F_V^\gamma$, due the absence of axial-tensor interaction from the orbifold condition in RS scenario. This leads to no contribution to fermionic anomalous magnetic moment.
+%  \begin{align}
+%   \delta F_V^\gamma(k^2) &= \frac{1}{6\pi}\,\frac{k^2}{\Lambda^2}\,\ln\left(\frac{\Lambda^2}{\mu^2}\right), \\
+%   \delta F_A^\gamma(k^2) &= 0 , \\
+%   \delta F_M^\gamma(k^2) &= 0 , \\
+%   \delta F_D^\gamma(k^2) &= 0.
+%  \end{align}
+%  where $\mu$ is some scale related with the process.
+Considering $Z^0$ boson coupled to $J^\mu(p,p')$ and electrons in the final state ($\mu = M_Z$ as the scale of the process involving $Z^0$ boson), the non vanishing form factors, evaluated at $Z^0$ pole are  
+\begin{align}
+  \delta F_V^Z(M_Z^2) &= 28.7\,\left(\frac{[\text{GeV}]^2}{\Lambda^2}\right)\,\ln\left(\frac{\Lambda^2}{M_Z^2}\right), \\
+  \delta F_A^Z(M_Z^2) &= -3.43\times10^4\,\left(\frac{[\text{GeV}]^2}{\Lambda^2}\right)\,\ln\left(\frac{\Lambda^2}{M_Z^2}\right).
+  %  \delta F_M^Z(M_Z^2) &= 0 , \\
+  %  \delta F_D^Z(M_Z^2) &= 0 ,
+\end{align}
+% 
+% The absence of axial-tensor current interaction in Eq.~\eqref{4FI5D} leads to zero contribution to magnetic form factor $\delta F_M^B$. This fact constraints no contribution to fermion anomalous magnetic moment in a effective theory coming from $5$-dimensional RS set up.
+
+%\input{constraints}
+
+\section{\label{sec:constraints}Constraints from precision tests: $Z^0$ boson width decay}
+
+In this section, our aim is to compare our theoretical results with experimental data. Using the obtained form factors, one can strongly constraint the scale for new physics coming from extra dimensions scenarios. This strength comes from comparing one-loop observables with precision tests of the SM. One of the most well known values, with excellent statistic and precision is the $Z^0$ width decay. Considering the most general current $J^\mu(p,p')$ in Eq.~\eqref{current}, the width decay of $Z^0$ into electrons can be decomposed
+\begin{align}
+  \Gamma_{\text{teo}}\left(Z^0\rightarrow e^+\,e^-\right) &= \Gamma_{\text{SM}} + \delta\Gamma_{\text{4FI}} 
+\end{align}
+% \begin{align}
+%  \Gamma_{\text{SM}} &= \alpha M_Z\left[\frac{a_e^Z}{2s_Wc_W}(T_e^f - 2Q_f\,s_W^2)\right] 
+% \end{align}
+% is the the tree level contribution $Z^0$ boson width decay and
+where $\Gamma_{\text{SM}} = 84.00\pm0.01 [\text{MeV}]$ is the theoretical prediction of the Standard Model to the $Z^0$ boson width decay (see Ref.~\cite{Beringer:1900zz}).
+
+Neglecting the weak anomalous magnetic moment $a_f^Z$, the contribution due radiative correction at one loop in this effective theory coming from RS setup with torsion is
+\begin{align}
+  \delta\Gamma_{\text{4FI}} &= -\frac{\alpha M_Z}{6\,s_Wc_W}\Bigg[(1 - 4s_W^2)\delta F_V^Z(M_Z^2) + \delta F_A^Z(M_Z^2)\Bigg]
+\end{align}
+Considering electron and positron in the final state and evaluating $\alpha$, vector and axial form factors at $Z^0$ pole one obtain 
+\begin{align}
+  \label{deltagammateo}
+  \delta\Gamma_{\text{4FI}} &= 9.87\times10^6\,[\text{MeV}]\left(\frac{[\text{GeV}]}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{M_Z^2}\right).
+\end{align}
+
+The best updated experimental values of $Z^0$ boson width decay into electron positron come from Ref.~\cite{Beringer:1900zz}
+\begin{align}
+  \label{deltagammaexp}
+  \Gamma_{\text{exp}} &= 83.984 \pm 0.086\;[\text{MeV}] 
+\end{align}
+and the effects of the Beyond the Standard Model physics has to be included in the difference between the theoretical value and the experimental one. This leads to the trascendental equation $\Gamma_{\text{teo}} - \Gamma_{\text{exp}}\geq \delta\Gamma_{\text{4FI}}$ which can be solved numerically. Restricting only to positive energy scales, and neglecting the scales excluded by the experiments (see Ref.~\cite{Chatrchyan:2013muj}), the trascendental equation has solution
+\begin{eqnarray}
+  \Lambda \geq 35\,[\text{TeV}]
+\end{eqnarray}
+at $95\% \text{C.L}$. The following figure shows how the contribution due four fermion interaction coming from torsion to $Z^0$ boson width decay behaves depending on $\Lambda$ :
+%%  \includegraphics[scale=.34]{excl.eps}
+%%  \caption{Exclusion limits for $\Lambda$ using the SM precision tests of $Z^0$ boson width decay. Blue curve line denotes $\delta\Gamma_{\text{4FI}}$ coming from torsionful extra dimension theory and the red straight one denotes $\delta\Gamma_{\text{exp}}$ obtained in SM precision tests. Shaded region denotes the error range of experimental data and is the allowed region for the solutions.}
+%% \end{figure}
+\vspace{0.4cm}
+
+\begin{tikzpicture}
+  \begin{axis}[
+      title = Variation of $Z$ Width Decay,
+      axis background/.style={
+        shade,top color=gray!50,bottom color=white},
+      xlabel = {$\Lambda$},
+      ylabel = {$\delta\Gamma_{\text{4FI}}$},
+      use units,
+      x unit = {GeV}, y unit = {MeV},
+      xmode = log,
+    ]
+    \addplot[ultra thick,
+      red,
+      samples = 301,
+      domain=91.19:2e6,
+    ] { 2.66e-9 };
+    \addplot[ultra thick,
+      blue,
+      samples = 301,
+      domain=91.19:2e6,
+    ] { ln(x^2/(91.1876)^2)/x^2 };
+    \coordinate (pt) at (axis cs: 2e5,1e-6);
+  \end{axis}
+  
+  \node[pin=90:{
+      \begin{tikzpicture}[baseline,trim axis left,trim axis right]
+        \begin{axis}[
+            axis background/.style={fill=white},
+            footnotesize,
+            grid = both,
+            grid style = {black!20,dashed},
+            xmode  = log,% ymode = log,
+            xmin = 4e4, xmax = 1.4e5,
+            ymin = 1e-10, ymax = 7.5e-9,
+          ]
+          
+          \addplot[very thick,
+            red,
+            fill = red,
+            fill opacity = .2,
+            domain=2000:2100000,
+            samples=301,
+          ] { 2.66e-9 } |- (axis cs:2000,-1e-9);
+          \addplot[very thick,
+            blue,
+            domain=2000:2100000,
+            samples=301,
+          ] { ln(x^2/(91.1876)^2)/x^2 };
+        \end{axis}
+      \end{tikzpicture}%
+  }] at (pt) {};
+\end{tikzpicture}
+\vspace{0.01mm}
+
+Now comparing with the effective coupling coming from large extra dimension scenario, one find 
+\begin{align}
+  \frac{6}{32}\,\kappa_{\text{eff}}^2 \longleftrightarrow \frac{1}{\Lambda^2}.
+\end{align}
+To solve the Hierarchy Problem in RS scenario, the value $M_*\sim\SI{1}{\TeV}$ has been fixed. Using the stabilization value $kR\sim10$ from Ref.~\cite{Goldberger:1999uk}, one obtains the following limits on the compactification radius for different fermion localization values
+\begin{align}
+  \label{rconst}
+  R &\lesssim \left\{ \begin{matrix}
+   10^{11}\; [\text{m}]& \text{if} & c_i\simeq0 \\
+    10^{7}\; [\text{m}]& \text{if} & c_i\simeq1/2 \\
+    10^{-14}\;[\text{m}]& \text{if} & c_i\simeq1 \\
+  \end{matrix} \right.
+\end{align}
+where the strongest limits comes from fermions localizated near to the Planck brane, which was expected due the enhancement of the gravitational scale close to this brane.
+
+
+\section{\label{sec:conclusions}Conclusions}
+
+In the present work a more general formulation of Gravity has been consider: the Cartan-Einstein Formalism. This framework gives rise to a contact four fermion interaction from the equations of motion, that is highly suppressed by the inverse of the squared Planck mass in four dimensions. 
+
+In order to deal with this, an scenario without this hierarchy between gravitational and SM interactions has been used, RS model \cite{Randall:1999ee}. This model suggests the existence of one large extra dimension. However, in order to deal with $4$-dimensional observables, this large extra dimension is compactified on an orbifold $S^1/\mathbb{Z}_2$ of radius $R$. This compactification leads to an effective theory in $4$-dimensions with a four fermion interaction due torsion. The relation between the fundamental ($M_*$) and the effective ($M_{\text{Pl}}$) Planck mass, appears through the dimensional reduction as an exponential function.  
+
+Considering this four fermion interaction in RS scenario, it can be decomposed in two terms: an axial-vector and axial-tensor interaction. By geometrical reasons of the present model this last term vanishes and leads only to the axial-vector one. One of the phenomenological implication of this absence is that, in RS model with one large extra dimension, torsion contributions to observables like leptonic anomalous magnetic moment are forbidden. 
+
+Although this axial-tensor interaction does not appears in the effective theory one can explore axial-vector mediated observables as $Z^0$ boson width decay at one-loop level. In Sec.~\ref{sec:oneloop} form factors are obtained from neutral bosons exchange processes. Using these form factors and the calculation of $Z^0$ boson width decay, the scale for new physics coming from torsionful extra dimension scenario has been achieved. The use of SM precision tests data leads to a scale for new physics $ \Lambda \geq \SI{35}{\TeV}$ at $95\% \text{C.L.}$, which strongly constraints the compactification radius of the extra dimension, for different fermion localization values, as Eq.~\eqref{rconst} shown.
+
+
+
+
+\section*{Acknowledgement}
+
+We would like to thank A. Toloza, V. Lyubovitskij for fruitful discussions. This work was supported by Conicyt (Chile) under Grant No. 21130179 and Fondecyt (Chile) under Grants No. 1100582, No. 1100287.
+
+
+
+
+\bibliographystyle{apsrev4-1}
+\bibliography{bibliography}
+
+
+
+
+\end{document}
