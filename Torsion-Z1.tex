@@ -336,19 +336,20 @@ Considering electron and positron in the final state and evaluating $\alpha$, ve
   \delta\Gamma_{\text{4FI}} &= \SI{9.87e6}{\MeV}\;\left(\frac{\si{\GeV}}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{M_Z^2}\right).
 \end{align}
 
-The best updated experimental values of $Z^0$ boson width decay into electron positron come from Ref.~\cite{Beringer:1900zz}
+The best updated experimental values of $Z^0$ boson width decay into electron positron is (see  Ref.~\cite{Beringer:1900zz})
 \begin{align}
   \label{deltagammaexp}
-  \Gamma_{\text{exp}} &= \SI{83.984 \pm 0.086}{\MeV} 
+  \Gamma_{\text{exp}} &= \SI{83.984 \pm 0.086}{\MeV} ,
 \end{align}
-and the effects of the Beyond the Standard Model physics has to be included in the difference between the theoretical value and the experimental one. This leads to the trascendental equation $\Gamma_{\text{teo}} - \Gamma_{\text{exp}}\geq \delta\Gamma_{\text{4FI}}$ which can be solved numerically. Restricting only to positive energy scales, and neglecting the scales excluded by the experiments (see Ref.~\cite{Chatrchyan:2013muj}), the trascendental equation has solution
+and the effects of the Beyond the Standard Model physics has to be included in the difference between the theoretical value and the experimental one.
+
+This leads to the equation $\Gamma_{\text{teo}} - \Gamma_{\text{exp}}\geq \delta\Gamma_{\text{4FI}}$. Restricting only to positive energy scales, and neglecting the scales excluded by the experiments (see Ref.~\cite{Chatrchyan:2013muj}), the  equation has solution for
 \begin{eqnarray}
-  \Lambda \geq \SI{35}{\TeV}
+  \Lambda \geq \SI{35}{\TeV}\quad \text{at 95\%C.L.}
 \end{eqnarray}
-at $95\%$C.L. The following figure shows how the contribution due four fermion interaction coming from torsion to $Z^0$ boson width decay behaves depending on $\Lambda$ :
-%%  \includegraphics[scale=.34]{excl.eps}
-%%  \caption{Exclusion limits for $\Lambda$ using the SM precision tests of $Z^0$ boson width decay. Blue curve line denotes $\delta\Gamma_{\text{4FI}}$ coming from torsionful extra dimension theory and the red straight one denotes $\delta\Gamma_{\text{exp}}$ obtained in SM precision tests. Shaded region denotes the error range of experimental data and is the allowed region for the solutions.}
-%% \end{figure}
+%at $95\%$C.L.
+
+The following figure shows how the contribution due four fermion interaction coming from torsion to $Z^0$ boson width decay behaves depending on $\Lambda$. The blue curve line denotes $\delta\Gamma_{\text{4FI}}$ coming from torsionful extra dimension theory and the red straight one denotes $\delta\Gamma_{\text{exp}}$ obtained in SM precision tests.
 \vspace{0.4cm}
 
 \begin{tikzpicture}
@@ -361,8 +362,10 @@ at $95\%$C.L. The following figure shows how the contribution due four fermion i
       use units,
       x unit = {GeV}, y unit = {MeV},
       xmode = log,
+      xmin = 8e1, xmax = 1e6,
     ]
     \addplot[ultra thick,
+      dashed,
       red,
       samples = 301,
       domain=91.19:2e6,
@@ -372,7 +375,7 @@ at $95\%$C.L. The following figure shows how the contribution due four fermion i
       samples = 301,
       domain=91.19:2e6,
     ] { ln(x^2/(91.1876)^2)/x^2 };
-    \coordinate (pt) at (axis cs: 2e5,1e-6);
+    \coordinate (pt) at (axis cs: 3e4,1e-6);
   \end{axis}
   
   \node[pin=90:{
@@ -382,21 +385,22 @@ at $95\%$C.L. The following figure shows how the contribution due four fermion i
             footnotesize,
             grid = both,
             grid style = {black!20,dashed},
-            xmode  = log,% ymode = log,
-            xmin = 4e4, xmax = 1.4e5,
-            ymin = 1e-10, ymax = 7.5e-9,
+            %xmode  = log,% ymode = log,
+            xmin = 1e4, xmax = 8e4,
+            ymin = 1e-9, ymax = 5e-8,
           ]
           
           \addplot[very thick,
             red,
+            dashed,
             fill = red,
             fill opacity = .2,
-            domain=2000:2100000,
+            domain=1e4:8e4,
             samples=301,
-          ] { 2.66e-9 } |- (axis cs:2000,-1e-9);
+          ] { 1.457e-8*1.64 } |- (axis cs:2000,-1e-9);
           \addplot[very thick,
             blue,
-            domain=2000:2100000,
+            domain=1e4:8e4,
             samples=301,
           ] { ln(x^2/(91.1876)^2)/x^2 };
         \end{axis}
@@ -408,7 +412,7 @@ Now comparing with the effective coupling coming from large extra dimension scen
 \begin{align}
   \frac{6}{32}\,\kappa_{\text{eff}}^2 \longleftrightarrow \frac{1}{\Lambda^2}.
 \end{align}
-To solve the Hierarchy Problem in RS scenario, the value $M_*\sim\SI{1}{\TeV}$ has been fixed. Using the stabilization value $k R \sim 10$ from Ref.~\cite{Goldberger:1999uk}, one obtains the following limits on the compactification radius for different fermion localization values
+To solve the Hierarchy Problem in RS scenario, the value $M_*\sim\SI{1}{\TeV}$ has been fixed. Using the stabilization value $k R \sim 10$ (see Ref.~\cite{Goldberger:1999uk}), one obtains the following limits on the compactification radius for different fermion localization values,
 \begin{align}
   \label{rconst}
   R \lesssim 
