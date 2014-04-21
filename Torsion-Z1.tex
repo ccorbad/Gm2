@@ -270,63 +270,46 @@ Using the definitions $\kappa_{\text{eff}}^2 \equiv M_{\text{Pl}}^{-2}$ and $\ka
 
 %\input{oneloop}
 
-\section{\label{sec:oneloop}One loop calculations and form factors}
+\section{\label{sec:oneloop}One-loop calculations and form factors}
 
 
-In this section, the effects of curvature in the effective theory in four dimensions will be ignored, by the fact that the Universe is essentially flat as Ref.~\cite{Larson:2010gs} indicates. This assumption is also based in our comparision of torsion effects with particle accelerators data. Note that flat geometry doesn't mean that torsionful 2-form curvature vanishes because, from Eq.~\eqref{gravdecomp} follows 
-\begin{align}
-  \Rf{a}{b} &\xrightarrow[]{g_{\mu\nu}\rightarrow\eta_{\mu\nu}} \df\Kfuu{a}{b} + \Kfud{a}{c}\,\Kfuu{c}{b} 
-\end{align}
-This consideration has been used before in Ref.~\cite{Carroll:1994dq,Belyaev:1998ax,Kostelecky:2007kx}. In CEF the metric and connection are independent, this condition allows to curvature and torsion be independent too. There exist manifolds with torsion and no curvature (Weitzenb\"ock manifolds), where teleparallel gravity relies (for further reading, see Ref.~\cite{Arcos:2005ec}). 
+In this section, the effects of curvature in the effective theory in four dimensions will be ignored, by the fact that the Universe is essentially flat as Ref.~\cite{Larson:2010gs} indicates. This consideration has been used before in Ref.~\cite{Carroll:1994dq,Belyaev:1998ax,Kostelecky:2007kx}, and allows us to discriminate between the EHT and the ECT of gravity. Moreover,  this  condition is compatible with the independence of Riemaniann curvature and torsion. 
 
-Our interest by now, is to extract information of the contribution of torsion to one loop form factors. Now, considering that $SU(2)_L\otimes U(1)_Y$ gauge sector of the SM is torsion free, the only effect of torsion is through the four fermion contact term in Eq.~\eqref{4FI5D}. Using this kind of interaction, our aim is to do one loop calculation in this theory. 
+Our interest by now, is to extract information of the contribution of torsion to one-loop form factors. Considering that $SU(2)_L\otimes U(1)_Y$ gauge sector of the SM is torsion free, the only effect of torsion is through the four-fermion contact term in Eq.~\eqref{4FI5D}. Using this kind of interaction, our aim is to do one-loop calculation in this theory.
 
-The process to be calculated in this section can be extracted from the general four femionic interaction Lagrangian used in Ref.~\cite{GonzalezGarcia:1998ay} plus one neutral gauge boson exchange. The relevant Lagrangian used by Gonzalez-Garc\'ia, Gusso and Novaes in the previous reference is
+The process to be calculated in this section can be extracted from the general four-femion interaction Lagrangian used in Ref.~\cite{GonzalezGarcia:1998ay} plus one neutral gauge boson exchange. The relevant Lagrangian used by Gonzalez-Garc\'ia, Gusso and Novaes in the previous reference is
 \begin{align}
   \nonumber
   \Lag_{\text{V}} &= \eta_V\,\frac{g^2}{\Lambda^2}\left[\psi_r\gamma_\mu\left(V_V - A_V\gamma^*\right)\psi_r\right] \\ 
   \label{lagvec}
   &\espacio\espacio\espacio\times \left[\psi_s\gamma^\mu\left(V_V - A_V\gamma^*\right)\psi_s\right],
 \end{align}
-where $r$ and $s$ denotes flavor indices as in the previous sections. The most general one loop calculation in this theory, can be build with the previous four fermion interaction Lagrangian and gauge boson coupled to fermions
+where $r$ and $s$ denotes flavor indices as in the previous sections. The most general one-loop calculation in this theory, can be build with the previous four-fermion interaction Lagrangian and gauge boson coupled to fermions
 \begin{align}
   \label{feyndiagram}
   \begin{tikzpicture}[thick,baseline=(current  bounding  box.center)]
     \coordinate (V) at (0,0);
     \node[circle,draw=black,shade,minimum size=.6cm]  at (V)  {};
-    \draw[boson] (-2,0) node[anchor=south] {$V_\mu(k)$} -- (180:3mm);
+    \draw[boson] (-2,0) node[anchor=south] {$Z^0_\mu(k)$} -- (180:3mm);
     \draw[directed] (1,-1) node[anchor=west] {$f(p)$}  -- (-45:3mm);
     \draw[directed] (45:3mm) -- (1,1) node[anchor=west] {$f(p')$};
   \end{tikzpicture}
   =\imath e \, V_\mu(k) J^\mu(p,p')
 \end{align}
-where $V_\mu(k) = \{A_\mu(k),Z^0_\mu(k)\}$ are the neutral gauge bosons to be considered and
+where $V_\mu = \{\gamma_\mu, Z^0_\mu\}$ are the neutral gauge bosons to be considered, and
 \begin{widetext}
   \begin{align}
     \label{current}
     J^\mu(p,p') &\equiv \bar{u}(p')\Bigg[\gamma^\mu\,F_V(k^2) +F_A(k^2)\gamma^\mu\gamma^* + i\frac{\sigma^{\mu\nu}\,k_\nu}{2\,m_f}F_M(k^2) + F_D(k^2)\frac{1}{2m_f}\sigma^{\mu\nu}\gamma^* k_\nu\Bigg]v(p)
   \end{align}
 \end{widetext}
-is the more general neutral current constructed from Eq.~\eqref{lagvec}. $F_i(k)$, where $i=V,A,M,D$, denotes vector, axial, magnetic and dipole form factor respectively that plays an important role in precise measurments of radiative correction. %In order to analyse the low energy regime of electro weak precision measuments, the following conditions must be satisfied. If one consider photon coupled to $J^\mu(p,p')$ in Eq.~\eqref{current}
-%   \begin{align}
-%   F_V^\gamma(0) &= Q_f,  \\
-%   F_A^\gamma(0) &= 0, \\
-%   F_M^\gamma(0) &= a_f^\gamma \equiv \frac{1}{2}\left(g_f-2\right),\\
-%   F_D^\gamma(0) &= d_f^e\,\frac{2\,m_f}{e},
-%   \end{align}
-%  must be met, where $Q_f$, $a_f^\gamma$ and $d_f^e$ denotes unities of proton electric charge, the anomalous magnetic moment and electric dipole moment of the fermion $f$ respectively. 
-%  
-% Considering $Z^0$ coupled to $J^\mu(p,p')$ in Eq.~\eqref{current}
-% \begin{align}
-% \label{vecformfacz}
-% F_V^Z(M_Z^2) &= \frac{1}{2\,s_W\,c_W}\left(T_3^f - 2\,Q_f\,s_W^2\right), \\
-% \label{axiformfacz}
-% F_A^Z(M_Z^2) &=  \frac{1}{2\,s_W\,c_W}T_3^f, \\
-% F_M^Z(M_Z^2) &= a_f^Z, \\
-% F_D^Z(M_Z^2) &= d_f^w\,\frac{2\,m_f}{e}, 
-% \end{align}
-% must be met, where $s_W(c_W) = \sin(\cos)\theta_W$ and $T_3^f$, $a_f^Z$ and $d_f^w$ denotes the third component of weak isospin, fermion weak magnetic moment and weak dipole moment of the fermion $f$ respectively. 
-We decompose form factors in their tree level value plus a contribution due radiative correction at one loop $F_i^B(k^2) = F_i^{B\,\text{tree}} + \delta F_i^B(k^2)$, where $i=V,A,M,D$ and $B = \gamma,Z^0$. Calculating this radiative corrections form factors $\delta F_i^B(k^2)$ is straighforward using the results obtained in Ref.~\cite{GonzalezGarcia:1998ay}. In the present work, $s$ and $t$-channels has been used with electrons in the final state and considering all possible particles running into the loop. By considering quarks into the loop, a factor $3$ has to be taken into account due their color. The normalization $g^2/4\pi = 1$ has been used. If $J^\mu(p,p')$ in Eq.~\eqref{current} is coupled to a photon field, the only non-vanishing form factor is $F_V^\gamma$, due the absence of axial-tensor interaction from the orbifold condition in RS scenario. This leads to no contribution to fermionic anomalous magnetic moment.
+is the more general neutral current constructed from Eq.~\eqref{lagvec}. The $\{F_i(k)\}$ denote vector, axial, magnetic and dipole form factors, that play an important role in precise measurments of radiative correction. 
+
+We decompose form factors in their tree level value plus a contribution due radiative correction at one-loop $F_i(k^2) = F_i^{\text{tree}} + \delta F_i(k^2)$. Calculating this radiative corrections form factors $\delta F_i(k^2)$ is straighforward using the results  in Ref.~\cite{GonzalezGarcia:1998ay}.
+
+In the present work, $s$ and $t$-channels has been used with electrons in the final state and considering all possible particles running into the loop. By considering quarks into the loop, a factor $3$ has to be taken into account due their color. The normalization $g^2/4\pi = 1$ has been used.
+
+If $J^\mu(p,p')$ in Eq.~\eqref{current} is coupled to a photon field, the only non-vanishing form factor is $F_V^\gamma$, due the absence of axial-tensor interaction from the orbifold condition in RS scenario. This leads to no contribution to fermionic anomalous magnetic moment.
 
 Considering $Z^0$ boson coupled to $J^\mu(p,p')$ and electrons in the final state ($\mu = M_Z$ as the scale of the process involving $Z^0$ boson), the non vanishing form factors, evaluated at $Z^0$ pole are  
 \begin{align}
@@ -343,7 +326,7 @@ In this section, our aim is to compare our theoretical results with experimental
 \end{align}
 where $\Gamma_{\text{SM}} = \SI{84.00 \pm 0.01}{\MeV}$ is the theoretical prediction of the Standard Model to the $Z^0$ boson width decay (see Ref.~\cite{Beringer:1900zz}).
 
-Neglecting the weak anomalous magnetic moment $a_f^Z$, the contribution due radiative correction at one loop in this effective theory coming from RS setup with torsion is
+Neglecting the weak anomalous magnetic moment $a_f^Z$, the contribution due radiative correction at one-loop in this effective theory coming from RS setup with torsion is
 \begin{align}
   \delta\Gamma_{\text{4FI}} &= -\frac{\alpha M_Z}{6\,s_Wc_W}\Bigg[(1 - 4s_W^2)\delta F_V^Z(M_Z^2) + \delta F_A^Z(M_Z^2)\Bigg]
 \end{align}
