@@ -16,6 +16,7 @@
 
 \input{definitions}
 \input{tikzdefinitions}
+\usepgfplotslibrary{fillbetween}
 
 
 \begin{document}
@@ -42,7 +43,7 @@
 \affiliation{Centro Cient\'ifico Tecnol\'ogico de Valpara\'iso, Chile.}
 
 \begin{abstract}
-  We study gravity with torsion in extra dimensions and derive an effective 4-dimensional theory containing four-fermion contact operators at the fundamental scale of quantum gravity in the TeV range. These operators may have an impact on the low-energy observables and can manifest themselves or can be constrained  in precision measurements.  We calculate possible contributions of these operators to some observables at one-loop level. We show that the existing precision data on the lepton decay mode of Z-boson set a stringent limit on the fundamental scale of the gravity to be as high as  $\Lambda\geq \SI{35}{\TeV}$ at 95\% C.L.
+  We study gravity with torsion in extra dimensions and derive an effective 4-dimensional theory containing four-fermion contact operators at the fundamental scale of quantum gravity in the TeV range. These operators may have an impact on the low-energy observables and can manifest themselves or can be constrained  in precision measurements.  We calculate possible contributions of these operators to some observables at one-loop level. We show that the existing precision data on the lepton decay mode of Z-boson set a stringent limit on the fundamental scale of the gravity to be as high as  $\Lambda\geq \SI{70}{\TeV}$ at 95\% C.L.
 \end{abstract}
 
 \maketitle
@@ -73,13 +74,13 @@ We explore one-loop observables within an effective four dimensional theory deri
 The article is organized as follow: In Sec.~\ref{sec:CEF}  we briefly summarize the Cartan-Einstein Formalism. In Sec.~\ref{sec:extradim}  we present an extra dimensional scenario with torsional gravity and derive the corresponding effective four-dimensional theory. Sec.~\ref{sec:oneloop} deals with the calculation of the one-loop $Z$ form factors of the fermions. In Sec.~\ref{sec:constraints} data on precision tests of the SM are used to constraint the parameters of the extra dimensional theory. We conclude with Sec.~\ref{sec:conclusions} summarizing and discussing our results as well as some uncovered aspects of TFFI phenomenology.
 
 
-\section{\label{sec:CEF} Einstein-Cartan Theory. Formalism.}
+\section{\label{sec:CEF} Einstein-Cartan gravity coupled with fermions}
 
 
-In this section we give a brief summary of the formalism used in the Einstein-Cartan Theory of gravity. %The ECT is constructed on more general grounds than the Einstein-Hilbert one.
+%In this section we give a brief summary of the formalism used in the Einstein-Cartan Theory of gravity. %The ECT is constructed on more general grounds than the Einstein-Hilbert one.
 Within the framework of first order formalism, spin connection and vielbeins are independent fields, and  torsion might not vanish. Including torsion implies the existence of an antisymmetric part of the affine connection
 \begin{align}
-  \hat{T}_{\hat{\mu}}{}^{\hat{\lambda}}{}_{\hat{\nu}} \equiv 2\hat{\Gamma}_{[\hat{\mu}}{}^{\hat{\lambda}}{}_{\hat{\nu}]} = \hat{\Gamma}_{\hat{\mu}}{}^{\hat{\lambda}}{}_{\hat{\nu}} - \hat{\Gamma}_{\hat{\nu}}{}^{\hat{\lambda}}{}_{\hat{\mu}},
+  \hat{\mathcal{T}}_{\hat{\mu}}{}^{\hat{\lambda}}{}_{\hat{\nu}} \equiv 2\hat{\Gamma}_{[\hat{\mu}}{}^{\hat{\lambda}}{}_{\hat{\nu}]} = \hat{\Gamma}_{\hat{\mu}}{}^{\hat{\lambda}}{}_{\hat{\nu}} - \hat{\Gamma}_{\hat{\nu}}{}^{\hat{\lambda}}{}_{\hat{\mu}},
 \end{align}
 where hatted  indices denote coordinates on a $D$-dimensional  spacetime, $\Ma$, endowed with a metric $\hat{g}_{\hat{\mu}\hat{\nu}}(x)$,  related with the vielbeins, $\vih^{\hat{a}}_{\hat{\mu}}(x)$, via
 \begin{equation}
@@ -174,7 +175,7 @@ where $\hat{T}_{\hat{a}\hat{b}}$ is the energy-momentum tensor of fermions, and 
 The equation of motion for the spin connection (Eq.~\eqref{contorsionfound}) is algebraic, therefore it can be substituted into the initial action in order to eliminate the torsion, which acts in this model as an auxiliary field. Towards this end it is convenient to pinpoint the torsion in the terms of Eq.~(\ref{formaction}) by the following decompositions
 \begin{eqnarray}
   \label{gravdecomp}
-  \Rfhn{a}{1}{a}{2} &=& \Rfhnfree{a}{1}{a}{2} + \free{\Df}\Kfhn{a}{1}{a}{2} + \Kfhnud{a}{1}{b}{}\wedge\Kfhn{b}{}{a}{2},\\
+  \Rfhn{a}{}{b}{} &=& \Rfhnfree{a}{}{b}{} + \free{\Df}\Kfhn{a}{}{b}{} + \Kfhnud{a}{}{c}{}\wedge\Kfhn{c}{}{b}{},\\
   \label{F-decomp}
   \Df\Psi_r \ \, &=& \free{\Df}\Psi_r + \frac{1}{4}\Kfhn{a}{}{b}{}\,\gamma_{\hat{a}\hat{b}}\Psi_r,
 \end{eqnarray}
@@ -273,7 +274,7 @@ Using the definitions $\kappa_{\text{eff}}^2 \equiv M_{\text{Pl}}^{-2}$ and $\ka
 \section{\label{sec:oneloop}One-loop calculations and form factors}
 
 
-In this section, the effects of curvature in the effective theory in four dimensions will be ignored, by the fact that the Universe is essentially flat as Ref.~\cite{Larson:2010gs} indicates. This consideration has been used before in Ref.~\cite{Carroll:1994dq,Belyaev:1998ax,Kostelecky:2007kx}, and allows us to discriminate between the EHT and the ECT of gravity. Moreover,  this  condition is compatible with the independence of Riemaniann curvature and torsion. 
+In the following, the effects of curvature in the effective theory in four dimensions will be ignored, by the fact that the Universe is essentially flat as Ref.~\cite{Larson:2010gs} indicates. This consideration has been used before in Ref.~\cite{Carroll:1994dq,Belyaev:1998ax,Kostelecky:2007kx}, and allows us to discriminate between the EHT and the ECT of gravity. Moreover,  this  condition is compatible with the independence of Riemaniann curvature and torsion. 
 
 Our interest by now, is to extract information of the contribution of torsion to one-loop form factors. Considering that $SU(2)_L\otimes U(1)_Y$ gauge sector of the SM is torsion free, the only effect of torsion is through the four-fermion contact term in Eq.~\eqref{4FI5D}. Using this kind of interaction, our aim is to do one-loop calculation in this theory.
 
@@ -290,7 +291,7 @@ where $r$ and $s$ denotes flavor indices as in the previous sections. The most g
   \begin{tikzpicture}[thick,baseline=(current  bounding  box.center)]
     \coordinate (V) at (0,0);
     \node[circle,draw=black,shade,minimum size=.6cm]  at (V)  {};
-    \draw[boson] (-2,0) node[anchor=south] {$Z^0_\mu(k)$} -- (180:3mm);
+    \draw[boson] (-2,0) node[anchor=south] {$V_\mu(k)$} -- (180:3mm);
     \draw[directed] (1,-1) node[anchor=west] {$f(p)$}  -- (-45:3mm);
     \draw[directed] (45:3mm) -- (1,1) node[anchor=west] {$f(p')$};
   \end{tikzpicture}
@@ -320,39 +321,52 @@ Considering $Z^0$ boson coupled to $J^\mu(p,p')$ and electrons in the final stat
 
 \section{\label{sec:constraints}Constraints from precision tests: Z boson width decay}
 
-In this section, our aim is to compare our theoretical results with experimental data. Using the obtained form factors, one can strongly constraint the scale for new physics coming from extra dimensions scenarios. This strength comes from comparing one-loop observables with precision tests of the SM. One of the most well known values, with excellent statistic and precision is the $Z^0$ width decay. Considering the most general current $J^\mu(p,p')$ in Eq.~\eqref{current}, the width decay of $Z^0$ into electrons can be decomposed
+%Here, our aim is to compare our theoretical results with experimental data.
+The obtained form factors can be used to strongly constraint the scale for new physics coming from extra dimensions scenarios. This strength comes from comparing one-loop observables with precision tests of the SM. One of the most well known values, with excellent statistic and precision is the $Z^0$ width decay. Considering the most general current $J^\mu(p,p')$ in Eq.~\eqref{current}, the width decay of $Z^0$ into electrons can be decomposed
 \begin{align}
-  \Gamma_{\text{teo}}\left(Z^0\rightarrow e^+\,e^-\right) &= \Gamma_{\text{SM}} + \delta\Gamma_{\text{4FI}} ,
+  \Gamma_{\text{th}}\left(Z^0\rightarrow e^+\,e^-\right) &= \Gamma_{\text{SM}} + \delta\Gamma_{\text{4FI}} ,
 \end{align}
 where $\Gamma_{\text{SM}} = \SI{84.00 \pm 0.01}{\MeV}$ is the theoretical prediction of the Standard Model to the $Z^0$ boson width decay (see Ref.~\cite{Beringer:1900zz}).
 
 Neglecting the weak anomalous magnetic moment $a_f^Z$, the contribution due radiative correction at one-loop in this effective theory coming from RS setup with torsion is
 \begin{align}
-  \delta\Gamma_{\text{4FI}} &= -\frac{\alpha M_Z}{6\,s_Wc_W}\Bigg[(1 - 4s_W^2)\delta F_V^Z(M_Z^2) + \delta F_A^Z(M_Z^2)\Bigg]
+  \delta\Gamma_{\text{4FI}} &= -\frac{\alpha M_Z}{6\,s_Wc_W}\Bigg[(1 - 4s_W^2)\delta F_V^Z(M_Z^2) + \delta F_A^Z(M_Z^2)\Bigg].
 \end{align}
-Considering electron and positron in the final state and evaluating $\alpha$, vector and axial form factors at $Z^0$ pole one obtain 
+Considering electron and positron in the final state, one obtain % and evaluating $\alpha$, vector and axial form factors at $Z^0$ pole one obtain 
 \begin{align}
   \label{deltagammateo}
   \delta\Gamma_{\text{4FI}} &= \SI{9.87e6}{\MeV}\;\left(\frac{\si{\GeV}}{\Lambda}\right)^2\,\ln\left(\frac{\Lambda^2}{M_Z^2}\right).
 \end{align}
 
-The best updated experimental values of $Z^0$ boson width decay into electron positron is (see  Ref.~\cite{Beringer:1900zz})
+The best updated experimental values of $Z^0$ boson width decay into electron-positron is (see  Ref.~\cite{Beringer:1900zz})
 \begin{align}
   \label{deltagammaexp}
   \Gamma_{\text{exp}} &= \SI{83.984 \pm 0.086}{\MeV} ,
 \end{align}
-and the effects of the Beyond the Standard Model physics has to be included in the difference between the theoretical value and the experimental one.
+and the effects of beyond the standard model physics has to be included in the difference between the theoretical value and the experimental one. This leads to the equation 
+\begin{align}
+  \Gamma_{\text{th}} - \Gamma_{\text{exp}}\geq \delta\Gamma_{\text{4FI}}.
+\end{align}
+%% $. Restricting only to positive energy scales, and neglecting the scales excluded by the experiments (see Ref.~\cite{Chatrchyan:2013muj}), the  equation has solution for
+%% \begin{eqnarray}
+%%   \Lambda \geq \SI{35}{\TeV}\quad \text{at 95\%C.L.}
+%% \end{eqnarray}
+%% %at $95\%$C.L.
 
-This leads to the equation $\Gamma_{\text{teo}} - \Gamma_{\text{exp}}\geq \delta\Gamma_{\text{4FI}}$. Restricting only to positive energy scales, and neglecting the scales excluded by the experiments (see Ref.~\cite{Chatrchyan:2013muj}), the  equation has solution for
-\begin{eqnarray}
-  \Lambda \geq \SI{35}{\TeV}\quad \text{at 95\%C.L.}
-\end{eqnarray}
-%at $95\%$C.L.
+Due to the agreement between the theoretical and experimental quantities, the bound on $\Lambda$ rise up to \mbox{$\Lambda \ge \SI{70}{\TeV}$} at 95\% C.L., if only the mean values are considered. However,  the uncertainty in the experimental measurement induces a shift in the limits. Accordingly, the lower bound imposed by the width decay of the $Z^0$ boson drops down to
+\begin{align}
+  \Lambda &\ge \SI{24.5}{\TeV}\quad \text{at 95\%C.L.}\\
+  \intertext{or}
+  \Lambda &\ge \SI{27.3}{\TeV}\quad \text{at 95\%C.L.},
+\end{align}
+depending on the error in the theoretical prediction.
 
-The following figure shows how the contribution due four fermion interaction coming from torsion to $Z^0$ boson width decay behaves depending on $\Lambda$. The blue curve line denotes $\delta\Gamma_{\text{4FI}}$ coming from torsionful extra dimension theory and the red straight one denotes $\delta\Gamma_{\text{exp}}$ obtained in SM precision tests.
+%The following figure shows how the contribution due four-fermion interaction coming from torsion to $Z^0$ boson width decay behaves depending on $\Lambda$. The blue curve line denotes $\delta\Gamma_{\text{4FI}}$ coming from torsionful extra dimension theory and the red straight one denotes $\delta\Gamma_{\text{exp}}$ obtained in SM precision tests.
+The figure below shows how the width decay of the $Z^0$ boson behaves depending on $\Lambda$. % introduced through the four-fermion interaction induced by torsion.
+The solid curve shows the variation of the width decay, $\delta\Gamma_{\text{4FI}}$, while the straight lines depict the allowed parameter region. The solid straight line is the more stringent limit, imposed by difference between the theoretical and experimental mean values of \mbox{$\Gamma(Z\to e^+\,e^-)$}. The dotted and dashed denote the shift of the allowed parameter region due to the experimental and theoretical errors obtained in SM precision tests.
 \vspace{0.4cm}
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.9]
   \begin{axis}[
       title = Variation of $Z$ Width Decay,
       axis background/.style={
@@ -369,7 +383,7 @@ The following figure shows how the contribution due four fermion interaction com
       red,
       samples = 301,
       domain=91.19:2e6,
-    ] { 2.66e-9 };
+    ] { 3.41e-9 };
     \addplot[ultra thick,
       blue,
       samples = 301,
@@ -386,21 +400,40 @@ The following figure shows how the contribution due four fermion interaction com
             grid = both,
             grid style = {black!20,dashed},
             %xmode  = log,% ymode = log,
-            xmin = 1e4, xmax = 8e4,
-            ymin = 1e-9, ymax = 5e-8,
+            xmin = 1.8e4, xmax = 7.5e4,
+            ymin = 1e-9, ymax = 4e-8,
           ]
+          \addplot[thick,
+            red,
+            %name path=A,
+            %% dashed,
+            %% fill = red,
+            %% fill opacity = .2,
+            domain=1e4:9e4,
+            samples=301,
+          ] { 2.33e-9 }; %|- (axis cs:2000,-1e-9);
           
-          \addplot[very thick,
+          \addplot[thick,
+            red,
+            dotted,
+            fill = red,
+            fill opacity = .15,
+            domain=1e4:9e4,
+            samples=301,
+          ] { 1.86e-8 } |- (axis cs:2000,2.33e-9);
+          
+          \addplot[thick,
             red,
             dashed,
             fill = red,
-            fill opacity = .2,
-            domain=1e4:8e4,
+            fill opacity = .15,
+            domain=1e4:9e4,
             samples=301,
-          ] { 1.457e-8*1.64 } |- (axis cs:2000,-1e-9);
+          ] { 1.53e-8 } |- (axis cs:2000,2.33e-9);
+          
           \addplot[very thick,
             blue,
-            domain=1e4:8e4,
+            domain=1e4:9e4,
             samples=301,
           ] { ln(x^2/(91.1876)^2)/x^2 };
         \end{axis}
@@ -408,7 +441,9 @@ The following figure shows how the contribution due four fermion interaction com
   }] at (pt) {};
 \end{tikzpicture}
 
-Now comparing with the effective coupling coming from large extra dimension scenario, one find 
+
+
+Comparing with the effective coupling coming from large extra dimension scenario, one find 
 \begin{align}
   \frac{6}{32}\,\kappa_{\text{eff}}^2 \longleftrightarrow \frac{1}{\Lambda^2}.
 \end{align}
@@ -422,10 +457,13 @@ To solve the Hierarchy Problem in RS scenario, the value $M_*\sim\SI{1}{\TeV}$ h
     \SI{e-14}{m}; & c_i\simeq1 
   \end{cases}
 \end{align}
-where the strongest limits comes from fermions localizated near to the Planck brane, which was expected due the enhancement of the gravitational scale close to this brane.
+where the strongest limits comes from fermions localized near to the Planck brane, which was expected due the enhancement of the gravitational scale close to this brane.
 
 
 \section{\label{sec:conclusions}Conclusions}
+
+In this paper we have considered Dirac fermions coupled with the (minimal) Einstein-Cartan Theory of gravity. Within this framework, a four-fermion contact interaction rises. For this minimal generalization of the Einstein-Hilbert Theory of gravity, the new fermion interaction is suppressed by the gravitational scale, which in four dimensions is the Planck's mass, $M_{\text{Pl}}\sim\SI{e19}{\GeV}$.
+
 
 In the present work a more general formulation of Gravity has been consider: the Cartan-Einstein Formalism. This framework gives rise to a contact four fermion interaction from the equations of motion, that is highly suppressed by the inverse of the squared Planck mass in four dimensions. 
 
